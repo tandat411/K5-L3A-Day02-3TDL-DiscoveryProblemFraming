@@ -5,19 +5,19 @@
 ## Thông tin nhóm
 
 - Tên nhóm: 3TDL
-- Candidate problem nhóm chọn (1 câu): Hộ kinh doanh thiếu công cụ AI để nhanh chóng chọn phương án vận chuyển, ước tính chi phí/thời gian và biết cách đóng gói đúng.
-- Quyết định cuối (Go / Not Yet / No-Go):
+- Candidate problem nhóm chọn (1 câu): Khi khách Mỹ hỏi mua đơn hàng gồm nhiều mẫu thủ công mỹ nghệ, hộ kinh doanh mất 1–3 ngày tự ước tính đóng gói (số thùng, cân nặng quy đổi/CBM), nhắn Zalo hỏi từng nhà cung cấp vận chuyển (NCC) và tự đối chiếu các báo giá/giấy tờ hải quan không đồng nhất trước khi báo lại cho khách.
+- Quyết định cuối (Go / Not Yet / No-Go): Not Yet
 
 ## Thành viên
 
 | STT | Họ và tên | MSSV | Vai trò trong nhóm | Tài khoản GitHub |
 |---:|---|---|---|---|
-| 1 | Mai Lâm Tấn Đạt | 2A202603645 | Trưởng nhóm | https://github.com/tandat411/ |
-| 2 | Nguyễn Mạnh Tường | 2A202603646 | Thành viên | https://github.com/manhtuongqt/ |
-| 3 | Lục Anh Tuấn | 2A202603634 | Thành viên | https://github.com/tuanvtxm6/ |
-| 4 | Nguyễn Thuỳ Lam | 2A202603632 | Thành viên | https://github.com/ThuyLam4719 |
-| 5 | Phạm Duy Đức | 2A202603634 | Thành viên | https://github.com/mynameduyjob/ |
-| 6 | Nguyễn Trần Tú Trân | 2A202603603 | Thành viên | https://github.com/trannguyentran |
+| 1 | Mai Lâm Tấn Đạt | 2A202603645 | Trưởng nhóm · Điều phối & Quyết định (CP3, CP6) | https://github.com/tandat411/ |
+| 2 | Nguyễn Mạnh Tường | 2A202603646 | Thành viên · Phụ trách kiểm chứng & Domain (CP3, CP4) | https://github.com/manhtuongqt/ |
+| 3 | Lục Anh Tuấn | 2A202603634 | Thành viên · Phụ trách Research giải pháp (CP4, CP6) | https://github.com/tuanvtxm6/ |
+| 4 | Nguyễn Thuỳ Lam | 2A202603632 | Thành viên · Phân tích mức can thiệp AI & Eval (CP4, CP6) | https://github.com/ThuyLam4719 |
+| 5 | Phạm Duy Đức | 2A202603634 | Thành viên · Vẽ quy trình trước/sau & Chiến lược dữ liệu (CP4, CP5) | https://github.com/mynameduyjob/ |
+| 6 | Nguyễn Trần Tú Trân | 2A202603603 | Thành viên · Viết Problem Statement v0/v1 & Ghi chép (CP5, CP6) | https://github.com/trannguyentran |
 
 Không ghi email hay số điện thoại vào bảng này, vì repo có thể để public.
 
