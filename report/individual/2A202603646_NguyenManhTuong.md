@@ -17,9 +17,9 @@ Tôi bắt đầu từ những việc có người làm, có thời điểm xả
 | 2 | Lặp lại, cần tổng hợp nhiều nguồn | Khi đến cuối tuần và cần chia tiền sinh hoạt phòng trọ, tôi muốn gom các khoản đã ứng và hóa đơn chung về một bảng có thể đối soát, để không bỏ sót tiền và tránh tranh cãi khi chia. | Người đứng ra tổng hợp tiền và các bạn cùng phòng. | Tình huống nháp tôi đưa ra có **3 nguồn**: ảnh hóa đơn, lịch sử chuyển khoản, tin nhắn; quy trình được ước tính **90 phút/tuần**, riêng đối soát **35 phút**. Chưa có log của một phòng cụ thể để xác nhận thời gian này. |
 | 3 | Lặp lại, tốn thời gian | Khi đi chợ cho vài ngày và nấu ăn một mình, tôi muốn biết nguyên liệu nào có thể dùng chung cho nhiều bữa, để mua vừa đủ và không phải bỏ thức ăn hỏng. | Sinh viên ở trọ tự nấu ăn. | Quy trình nháp tôi đưa ra là **90 phút/tuần**, trong đó bước chọn món khoảng **35 phút**. Mức lãng phí thực phẩm chưa được cân hoặc ghi sổ, nên không dùng tỷ lệ phần trăm làm bằng chứng. |
 | 4 | Tốn thời gian, cần tổng hợp nhiều nguồn | Khi tìm phòng trọ mới, tôi muốn biết tổng tiền phải trả và những điều kiện sinh hoạt trước khi đi xem, để không mất một chuyến đi vì giá đăng thiếu phụ phí. | Sinh viên đang tìm trọ. | Bản nháp tôi đưa ra có **5–7 tin đăng/tuần** cần lọc, khoảng **40 phút** hỏi giá và phụ phí. Đây là ước lượng của tình huống, chưa có danh sách tin đã đối chiếu. |
-| 5 | Lặp lại, pain từ người khác | Khi đến lượt dọn bếp và đổ rác trong phòng trọ ở ghép, tôi muốn mọi người thống nhất rõ ai làm việc nào trước cuối tuần, để khu sinh hoạt chung sạch mà không phải nhắc đi nhắc lại hoặc đổ lỗi cho nhau. | Những người ở cùng phòng; người thường đứng ra nhắc việc chịu thêm công điều phối. | Tình huống để khảo sát là phòng **3–4 người** với hai việc dễ bị bỏ quên: dọn bếp và đổ rác. Tôi chưa có lịch trực, tin nhắn nhắc việc hay số lần tranh cãi của một phòng cụ thể; cần hỏi và ghi lại trước khi coi đây là pain đã được xác nhận. |
+| 5 | Lặp lại, cần tổng hợp nhiều nguồn | Khi nhiều môn cùng giao bài trong một tuần, tôi muốn biết bài nào đến hạn trước và cần làm bước nào hôm nay, để không tới sát giờ nộp mới phát hiện còn việc chưa xong. | Sinh viên đang học nhiều môn và có bài tập, bài lab cùng lúc. | Tôi đang làm bài Day 01 và Day 02 trong hai repo khác nhau; đây là **2 đầu việc học tập** cần theo dõi. Tôi chưa ghi nhật ký số lần quên hạn hoặc số phút lập lịch, nên chưa coi việc trễ hạn là kết quả đã đo. |
 
-**Cách tôi dùng gợi ý từ AI:** Tôi không đưa ý tưởng “làm chatbot học tập” vào bảng vì đó là cách giải quyết, chưa chỉ ra bước nào trong việc học đang nghẽn. Tôi giữ vấn đề học bị trì hoãn vì đã nêu được khoảng chậm 1–2 tuần của mình. Bốn tình huống sinh hoạt còn lại là các hướng để khảo sát thêm, chưa phải kết quả phỏng vấn. Những con số dự tính trong quy trình chỉ là điểm xuất phát để bấm giờ khi kiểm chứng.
+**Cách tôi dùng gợi ý từ AI:** Tôi không đưa ý tưởng “làm chatbot học tập” vào bảng vì đó là cách giải quyết, chưa chỉ ra bước nào trong việc học đang nghẽn. Tôi giữ vấn đề học bị trì hoãn vì đã nêu được khoảng chậm 1–2 tuần của mình. Các tình huống còn lại là hướng để khảo sát thêm, chưa phải kết quả phỏng vấn. Những con số dự tính trong quy trình chỉ là điểm xuất phát để bấm giờ khi kiểm chứng.
 
 ## 3. Top 3 Problem Cards + quy trình nháp (CP2)
 
@@ -29,7 +29,7 @@ Tôi bắt đầu từ những việc có người làm, có thời điểm xả
 |---:|---|---|---|
 | 1 | Bắt đầu ôn thi khi hạn còn xa (#1) | Đây là trải nghiệm tôi nêu rõ nhất: chậm 1–2 tuần. Có thể kiểm tra bằng ngày bắt đầu học và số phiên học hoàn thành. | Cơ chế phần thưởng có thực sự giúp bắt đầu hay chỉ làm tôi phân tâm? |
 | 2 | Đối soát tiền sinh hoạt phòng trọ (#2) | Actor, dữ liệu đầu vào và điểm nghẽn gom chứng từ đều cụ thể. Có thể thử trên một bộ hóa đơn mẫu trong buổi lab. | Thời gian 35 phút ở bước đối soát cần đo lại với người thực sự đang giữ tiền. |
-| 3 | Phân công dọn khu sinh hoạt chung (#5) | Một nhóm nhỏ, hai việc cụ thể và một điểm nghẽn có thể quan sát: xác định ai đang nhận việc nào. Có thể thử quy trình bằng lịch trực một tuần. | Chưa có tin nhắn nhắc việc hoặc nhật ký của một phòng thật để đo tần suất bỏ sót. |
+| 3 | Sắp thứ tự bài tập trong tuần (#5) | Khác với card #1 về bắt đầu ôn thi dài hạn, card này tập trung vào các hạn nộp gần và việc chọn bước tiếp theo trong ngày. Có thể thử bằng lịch bài tập một tuần. | Chưa có nhật ký số lần quên hạn hay thời gian lập lịch để làm baseline. |
 
 ### Problem Card #1 — Bắt đầu ôn thi khi đích còn xa
 
@@ -89,35 +89,35 @@ Nhắc các bạn gửi chứng từ (10 phút)
 
 **Phản biện PM hoài nghi:** “Bảng tính chia tiền đã có. Nếu không ai ghi khoản chi lúc phát sinh thì cuối tuần vẫn thiếu dữ liệu.” Tôi sửa phạm vi từ “công cụ chia tiền” sang **bước gom chứng từ và xác nhận chi chung theo đợt**. Cách thử là dùng lại bảng tính hiện có, không xây ứng dụng mới trong bốn giờ lab.
 
-### Problem Card #3 — Phân công việc chung trong phòng trọ
+### Problem Card #3 — Quản lý hạn bài tập trong tuần của sinh viên
 
 | Trường | Nội dung |
 |---|---|
-| Job Story | Khi đến lượt dọn bếp và đổ rác trong phòng trọ ở ghép, tôi muốn biết rõ ai làm từng việc và khi nào có thể đổi ca, để việc chung được xử lý mà không phải một người nhắc mãi. |
-| Actor | Người ở cùng phòng và người đang đứng ra nhắc lịch dọn; người thực hiện việc dọn là người chịu trách nhiệm chính. |
-| Bối cảnh | Dọn bếp sau khi nấu và đổ rác trước khi đầy là hai việc lặp lại. Lịch học và lịch làm thêm của từng người có thể khác nhau. Đây là tình huống cần hỏi phòng trọ thật trước khi kết luận. |
-| Quy trình hiện tại | Nhận thấy việc chưa làm → nhắn nhóm hỏi ai rảnh → đối chiếu lịch từng người → chốt người nhận việc → người được phân công làm và báo lại. |
-| Bottleneck | Bước 3: phải chờ và đối chiếu câu trả lời rời rạc để chốt người làm. **15 phút** chỉ là mức giả định để thử bấm giờ, chưa phải thời gian đã đo. |
-| Impact | Nếu không ai nhận trách nhiệm, việc chung dễ bị lùi sang ngày sau và người chủ động phải nhắc lại. Chưa có bằng chứng để khẳng định số lần xảy ra hoặc mức độ mâu thuẫn. |
-| Success metric | Tuần đầu đo baseline bằng số lần phải nhắc quá một lần cho cùng một việc và số phút từ lúc hỏi đến khi có người nhận. Target thử: hai việc đều có người nhận trước hạn, thời gian chốt người làm dưới **5 phút**; ghi lại bằng lịch trực và tin nhắn đã được mọi người đồng ý. |
-| Phương án không dùng AI | Lập lịch trực trên giấy hoặc bảng chung; mỗi người tự chọn ca phù hợp, đổi ca phải được người còn lại đồng ý và cập nhật ngay. |
-| Giả thuyết về AI | Nếu nhóm chat quá nhiều tin, AI có thể tóm tắt ai đã báo bận và những ca còn trống. Mọi phân công và đổi ca phải do người ở cùng phòng xác nhận. |
-| Việc con người phải làm | Những người ở cùng phòng thỏa thuận mức công bằng, tự nhận hoặc đổi ca, thực hiện việc dọn và xác nhận đã xong. Người điều phối chỉ cập nhật lịch sau khi các bên đồng ý. |
-| Ranh giới và cách quay lại | AI không tự phân việc, phán xét ai lười hoặc gửi tin nhắn nhắc hộ. Nếu bản tóm tắt bỏ sót một tin báo bận, cả phòng quay lại lịch giấy và tin nhắn gốc để chốt. |
-| Cảm nhận nhanh | **No AI/Rule** là đủ cho thử nghiệm đầu. Không cần AI tự nhắn nhắc hoặc quyết định ai phải dọn. |
+| Job Story | Khi đầu tuần tôi nhận bài tập từ nhiều môn với hạn nộp khác nhau, tôi muốn nhìn rõ việc nào cần làm hôm nay và cần bắt đầu từ đâu, để hoàn thành từng bài trước hạn thay vì xử lý tất cả vào tối cuối cùng. |
+| Actor | Sinh viên học nhiều môn, tự chịu trách nhiệm theo dõi và nộp bài. |
+| Bối cảnh | Thông báo bài tập nằm ở LMS, tài liệu môn học hoặc nhóm chat; thời gian rảnh còn phải chia cho giờ học và việc cá nhân. Card này xét hạn bài tập trong tuần, không xét động lực ôn thi cuối kỳ của card #1. |
+| Quy trình hiện tại | Xem thông báo từng môn → ghi nhớ hạn nộp → ước lượng khối lượng từng bài → chọn việc làm hôm nay → làm bài → kiểm lại và nộp. |
+| Bottleneck | Bước 3–4: khó ước lượng việc nào tốn công và ưu tiên theo hạn gần. **15 phút** là ước lượng để thử bấm giờ, chưa phải số đo thực tế. |
+| Impact | Việc gấp dễ bị lẫn với việc quan trọng; có nguy cơ dồn bài vào sát hạn. Tôi chưa có log chứng minh số lần trễ hạn. |
+| Success metric | Tuần đầu ghi baseline: số bài nộp sát hạn, số lần quên hạn và phút lập kế hoạch. Target thử: **0 lần quên hạn** trong tuần tiếp theo và mỗi bài có bước đầu tiên được xếp lịch ít nhất 24 giờ trước hạn. Đối chiếu lịch với thời điểm nộp thật. |
+| Phương án không dùng AI | Một bảng giấy hoặc lịch điện thoại ghi môn, hạn, việc nhỏ tiếp theo và trạng thái; mỗi tối tự rà 5 phút. |
+| Giả thuyết về AI | AI có thể giúp trích hạn và đầu việc từ thông báo dài, nhưng chỉ tạo bản nháp; tôi đối chiếu lại thông báo gốc. |
+| Việc con người phải làm | Tôi xác nhận hạn, tự ước lượng sức mình, chọn thứ tự ưu tiên, làm bài và kiểm tra bản nộp. Tôi quyết định đổi lịch khi có việc đột xuất. |
+| Ranh giới và cách quay lại | AI không tự đổi hạn nộp, đánh dấu bài đã xong hay nộp bài thay tôi. Nếu trích sai hạn, tôi sửa trực tiếp trên lịch từ thông báo gốc. |
+| Cảm nhận nhanh | **No AI/Rule** là đủ để thử trước; chỉ cân nhắc AI nếu việc đọc nhiều thông báo thật sự chiếm thời gian. |
 
-Quy trình nháp hiện tại (phút thao tác là **ước lượng để thiết kế cách đo**, không phải ghi nhận từ một phòng cụ thể; thời gian chờ phản hồi có thể kéo dài hơn):
+Quy trình nháp hiện tại (phút là **ước lượng để thử đo**, chưa phải nhật ký thời gian):
 
 ```text
-Thấy bếp cần dọn hoặc thùng rác đã đầy (2 phút)
-  → Nhắn nhóm, hỏi lịch rảnh của từng người (3 phút)
-  → [NGHẼN] Đối chiếu câu trả lời và chờ chốt người nhận (15 phút giả định)
-  → Xác nhận ca trực hoặc đổi ca trên lịch chung (5 phút)
-  → Người nhận việc dọn bếp/đổ rác (20 phút giả định)
-  → Người đó đánh dấu đã xong; người ở cùng phòng kiểm tra (2 phút)
+Xem thông báo của từng môn (10 phút)
+  → Ghi hạn nộp vào lịch chung của bản thân (5 phút)
+  → [NGHẼN] Ước lượng khối lượng và chọn bài cần làm trước (15 phút)
+  → Chia bài ưu tiên thành bước có thể làm hôm nay (10 phút)
+  → Làm bước đầu tiên (25 phút)
+  → Rà hạn và cập nhật trạng thái cuối ngày (5 phút)
 ```
 
-**Phản biện PM hoài nghi:** “Không có nhật ký nhắc việc thì làm sao biết đây là vấn đề của cả phòng, và một tờ lịch trực có thể đã giải quyết xong?” Tôi bỏ nhận định rằng việc dọn chung thường xuyên gây tranh cãi. Card chỉ nêu **giả thuyết** về bước chốt ca; trước tiên cần ghi một tuần xem có bao nhiêu lần phải nhắc lại. Nếu lịch trực giấy hoạt động, không cần thêm AI.
+**Phản biện PM hoài nghi:** “Sinh viên đã có lịch điện thoại; khó khăn có thật sự ở việc ghi hạn hay ở việc bắt tay làm bài?” Tôi thu hẹp card vào **chọn thứ tự và bước đầu tiên cho các bài đến hạn trong tuần**. Trước tiên thử bảng lịch thủ công một tuần; nếu vẫn quên hạn hoặc không bắt đầu, cần xem lại nguyên nhân trước khi thêm AI.
 
 ### Card tôi muốn pitch nhất
 
@@ -126,7 +126,7 @@ Thấy bếp cần dọn hoặc thùng rác đã đầy (2 phút)
 
 ### Tôi đã dùng AI ở CP1–CP2 như thế nào
 
-AI giúp sắp các ý thành Job Story, tách “điểm nghẽn” khỏi ý tưởng giải pháp và đóng vai PM hoài nghi. Ở card ôn thi, phản biện về **đầu việc quá lớn** khiến tôi tách việc chia nhỏ bài học và phần thưởng thành hai giả thuyết để thử. Ở card chi tiêu, AI chỉ được đọc thông tin sơ bộ từ chứng từ; ở card việc nhà, AI thậm chí có thể không cần thiết. Tôi vẫn phải xác nhận số liệu và tự chốt quyết định. Các số phút chưa có log được ghi là ước lượng, không trình bày thành kết quả phỏng vấn. Ba card này là bản chuẩn bị để pitch, không phải quyết định cuối của nhóm.
+AI giúp sắp các ý thành Job Story, tách “điểm nghẽn” khỏi ý tưởng giải pháp và đóng vai PM hoài nghi. Ở card ôn thi, phản biện về **đầu việc quá lớn** khiến tôi tách việc chia nhỏ bài học và phần thưởng thành hai giả thuyết để thử. Ở card chi tiêu, AI chỉ được đọc thông tin sơ bộ từ chứng từ; ở card lịch bài tập, AI chỉ có thể trích thông báo để tôi kiểm lại. Tôi vẫn phải xác nhận số liệu và tự chốt quyết định. Các số phút chưa có log được ghi là ước lượng, không trình bày thành kết quả phỏng vấn. Ba card này là bản chuẩn bị để pitch, không phải quyết định cuối của nhóm.
 
 ## 4. Tôi đã tham gia phần nào (CP3 → CP7)
 
@@ -147,7 +147,7 @@ AI giúp sắp các ý thành Job Story, tách “điểm nghẽn” khỏi ý t
 | Checkpoint | Tôi dùng AI để làm gì? | AI hữu ích ở đâu? | AI thiếu hoặc sai ở đâu? | Tôi đã kiểm tra/sửa gì? |
 |---|---|---|---|---|
 | CP1 | Hỗ trợ trình bày các tình huống và gợi ý thêm góc nhìn. | Chuyển vấn đề thành Job Story, tránh nêu giải pháp trước. | Không thể tự biết thời gian hay tần suất thật của tôi và người khác. | Gắn nhãn ước lượng; chỉ coi mốc trì hoãn 1–2 tuần do tôi nêu là trải nghiệm đã xác nhận. Bốn tình huống còn lại cần khảo sát. |
-| CP2 | Đóng vai PM hoài nghi với ba card. | Hỏi đúng điểm chưa chắc ở bước bắt đầu học, gom chứng từ và phân công việc nhà. | Có thể đề xuất ngay app/phần thưởng khi chưa biết cơ chế nào có tác dụng; không thể thay con người xác nhận giao dịch hay nhận ca trực. | Chuyển các ý tưởng thành giả thuyết để thử, ưu tiên No AI hoặc Rule. Việc học, chia tiền và phân ca đều do con người chốt. |
+| CP2 | Đóng vai PM hoài nghi với ba card. | Hỏi đúng điểm chưa chắc ở bước bắt đầu ôn thi, gom chứng từ và xếp bài theo hạn. | Có thể đề xuất ngay app/phần thưởng khi chưa biết cơ chế nào có tác dụng; không thể thay con người xác nhận giao dịch hoặc ưu tiên học tập. | Chuyển các ý tưởng thành giả thuyết để thử, ưu tiên No AI hoặc Rule. Việc học, chia tiền và lập lịch đều do con người chốt. |
 
 ## 6. Reflection (CP7)
 
