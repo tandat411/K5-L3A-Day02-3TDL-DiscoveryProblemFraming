@@ -4,18 +4,18 @@
 
 ## Thông tin nhóm
 
-- Tên nhóm:
-- Candidate problem nhóm chọn (1 câu):
+- Tên nhóm: 3TDL
+- Candidate problem nhóm chọn (1 câu): Hộ kinh doanh thiếu công cụ AI để nhanh chóng chọn phương án vận chuyển, ước tính chi phí/thời gian và biết cách đóng gói đúng.
 - Quyết định cuối (Go / Not Yet / No-Go):
 
 ## Thành viên
 
 | STT | Họ và tên | MSSV | Vai trò trong nhóm | Tài khoản GitHub |
 |---:|---|---|---|---|
-| 1 | | | | |
-| 2 | | | | |
-| 3 | | | | |
-| 4 | | | | |
+| 1 | Mai Lâm Tấn Đạt | 2A202603645 | Trưởng nhóm | https://github.com/tandat411/K5-L3A-Day02-3TDL-DiscoveryProblemFraming |
+| 2 | | | Thành viên | |
+| 3 | | | Thành viên | |
+| 4 | | | Thành viên | |
 
 Không ghi email hay số điện thoại vào bảng này, vì repo có thể để public.
 

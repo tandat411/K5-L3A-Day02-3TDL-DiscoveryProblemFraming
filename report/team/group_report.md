@@ -5,9 +5,9 @@
 
 ## 1. Thông tin nhóm
 
-- Tên nhóm:
+- Tên nhóm: 3TDL
 - Thành viên: xem `TEAM.md`
-- Candidate problem được chọn (1 câu):
+- Candidate problem được chọn (1 câu): Hộ kinh doanh thiếu công cụ AI để nhanh chóng chọn phương án vận chuyển, ước tính chi phí/thời gian và biết cách đóng gói đúng.
 - Quyết định cuối: Go / Not Yet / No-Go
 
 ---
