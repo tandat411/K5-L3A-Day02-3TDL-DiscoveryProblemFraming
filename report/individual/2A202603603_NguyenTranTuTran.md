@@ -44,7 +44,7 @@ Lăng kính: **Lặp lại** · **Tốn thời gian** · **Cần đọc, tổng 
 
 | Rank | Problem | Vì sao chọn | Điều còn chưa chắc |
 |---:|---|---|---|
-| 1 | Đo đạc đóng gói & tính cước vận chuyển hàng thủ công xuất B2B | Xuất phát từ nỗi trăn trở có thật của gia đình tôi; hàng cồng kềnh xuất trực tiếp ngoài sàn bị tắc nghẽn khâu tính thể tích thùng và giá cước. | Liệu các forwarder nhỏ có chịu báo giá qua hệ thống chuẩn hoá không, hay vẫn muốn trao đổi qua Zalo. |
+| 1 | Tập hợp đầu hướng chi phí & tính đóng gói cho hộ thủ công nhỏ lẻ (B2B/B2C) | Xuất phát từ nỗi đau thực tế của gia đình tôi: hộ nhỏ tự làm sản phẩm, không có thời gian đi chat dọ giá trên group Facebook/Zalo, không muốn qua trung gian XNK ăn chênh lệch, cần kết nối các nhà xe/forwarder nhỏ có giá tiểu ngạch/chính ngạch tốt. | Cách thức kết nối và cập nhật biểu phí linh hoạt từ các đơn vị logistics nhỏ/tư nhân. |
 | 2 | Đối soát thanh toán & mã đơn hàng cuối ngày | Tốn thời gian lặp lại mỗi ngày của kế toán/chủ xưởng; dễ sót tiền khi khách ghi sai cú pháp chuyển khoản. | Mức độ hỗ trợ kết nối dữ liệu tự động từ các ngân hàng nội địa. |
 | 3 | Editor nộp bản dựng video & kiểm duyệt checklist | Mất 2–3 tiếng/ngày của người quản lý; chất lượng nhân sự không đều làm kéo dài thời gian sửa đi sửa lại. | AI có đánh giá được cảm xúc và nhịp điệu video hay chỉ dừng lại ở việc soi lỗi kỹ thuật thô. |
 
@@ -52,27 +52,26 @@ Lăng kính: **Lặp lại** · **Tốn thời gian** · **Cần đọc, tổng 
 
 | Trường | Nội dung |
 |---|---|
-| Job Story | Khi đối tác nước ngoài hỏi mua lô hàng thủ công mỹ nghệ số lượng sỉ (B2B trực tiếp không qua sàn), tôi muốn ước tính chính xác cách đóng gói (số thùng, CBM, cân nặng quy đổi) và cước vận chuyển trọn gói trong 30 phút, để báo giá chốt đơn ngay mà không bị lỗ tiền ship hoặc tắc nghẽn hải quan. |
-| Actor | Chủ hộ kinh doanh thủ công mỹ nghệ (bản thân tôi và gia đình). |
-| Thời điểm / bối cảnh | - Gia đình tôi làm hộ kinh doanh nhỏ sản xuất hàng thủ công mỹ nghệ (gốm sứ, mây tre, đồ gỗ decor).<br>- Muốn bán trực tiếp cho các đối tác B2B ở nước ngoài (quán cafe, shop decor nhỏ, nhà hàng) chứ không qua các sàn như Amazon hay Etsy vì chi phí sàn quá cao và cạnh tranh khốc liệt.<br>- Khi có đơn xuất khẩu số lượng lớn/vừa thì gặp trục trặc lớn ở khâu vận chuyển: không biết đóng thùng thế nào, bị forwarder tính cước thể tích (CBM) quá cao, thiếu giấy tờ hun trùng/kiểm dịch làm ách tắc hàng. |
-| Quy trình hiện tại (3–7 bước) | - Bước 1: Khách B2B nước ngoài gửi danh sách đặt hàng nhiều mẫu qua Zalo/WhatsApp.<br>- Bước 2: Tôi và người nhà lấy thước dây đo từng món, tự đoán cách xếp vào mấy thùng carton.<br>- Bước 3: Chụp ảnh, gửi kích thước ước chừng cho 3–4 đơn vị forwarder/gom hàng quen để hỏi giá.<br>- Bước 4: Chờ 1–2 ngày forwarder hỏi qua hỏi lại về loại gỗ, hun trùng, giao tận nơi hay tới cảng.<br>- Bước 5: Nhận báo giá lộn xộn mỗi nơi một kiểu (bên tính kg, bên tính CBM), tự tính nhẩm rồi báo khách; khách đợi lâu nên thường bỏ đi. |
-| Bottleneck (bước nào, mất bao nhiêu phút) | - Bước 2 (đo đạc, ước lượng đóng gói) và Bước 4 (chờ forwarder báo giá).<br>- Mất từ 1 đến 2 ngày chỉ để chốt được giá vận chuyển cho một đơn hàng.<br>- Tỷ lệ ước lượng sai thể tích gây bù lỗ cước từ 15% – 30% giá trị lô hàng. |
-| Impact (nếu không giải thì sao) | - Mất khách hàng sỉ tiềm năng vào tay các xưởng nước ngoài (Trung Quốc, Philippines) vì họ báo giá DDP trong vài giờ.<br>- Gia đình luôn có tâm lý bất an, sợ nhận đơn xuất khẩu lớn dù sản phẩm làm ra rất đẹp. |
-| Success metric (baseline → target) | - Thời gian từ lúc khách hỏi đến lúc có giá ship: từ 24–48 giờ giảm xuống dưới 1 giờ.<br>- Sai số giữa cước ước tính và hóa đơn thực tế: giảm xuống dưới 10%.<br>- Tỷ lệ chốt đơn B2B thành công: tăng ít nhất 25%. |
-| Phương án không dùng AI | - Lập bảng tính Excel chuẩn công thức tính CBM = (Dài x Rộng x Cao) / 5000.<br>- Chuẩn hóa sẵn 3 kích thước thùng carton cố định trong xưởng để dễ xếp hàng. |
-| Giả thuyết về AI (nếu có) | - Dùng thuật toán 3D Bin Packing gợi ý cách xếp các món dị hình vào thùng tối ưu nhất.<br>- Dùng LLM trích xuất tin nhắn/PDF báo giá lộn xộn của forwarder về một bảng so sánh chung. |
-| Cảm nhận nhanh | Rule / Thuật toán hình học + Workflow có AI (chưa cần Agent). |
+| Job Story | Khi khách hàng nước ngoài (cả B2B đặt sỉ nhỏ lẫn B2C mua lẻ) hỏi giá đơn hàng thủ công mỹ nghệ, tôi muốn hệ thống tự động tính quy cách đóng thùng (3D/CBM) và tập hợp sẵn các đầu hướng cước từ các đơn vị logistics nhỏ (tiểu ngạch/chính ngạch/chuyên tuyến), để có báo giá trọn gói tức thì cho khách mà không phải bỏ dở việc làm sản phẩm để đi săn mối dọ giá trên các hội nhóm. |
+| Actor | Chủ hộ kinh doanh thủ công mỹ nghệ nhỏ lẻ, tự sản xuất độc lập (gia đình tôi). |
+| Thời điểm / bối cảnh | - **Tập trung vào 3 yếu tố chi phí cốt lõi:**<br>  1. *Quy cách đóng gói:* Đo đạc, quy đổi thể tích hàng cồng kềnh/dị hình ra số lượng thùng carton chuẩn (CBM, Dimensional Weight) để không bị hớ cước.<br>  2. *Tập hợp đầu hướng cước đa dạng:* Không phụ thuộc vào các đại lý lớn độc quyền (như Amazon hay DHL/FedEx giá trên trời), mà kết nối mạng lưới các đơn vị logistics vừa và nhỏ đang chạy đa dạng các tuyến (tiểu ngạch, chính ngạch, chuyên tuyến DDP bao thuế, gom hàng LCL) có giá cước cạnh tranh nhất.<br>  3. *Tự động tính toán trọn gói tức thì:* Tự động cộng gộp (giá xuất xưởng + chi phí đóng thùng + cước theo tuyến tối ưu + phụ phí) để trả ra báo giá ngay cho khách (cả B2B và B2C), giải phóng hoàn toàn thời gian cho chủ xưởng.<br>- **Đặc thù đối tượng áp dụng:**<br>  - Gia đình tôi là hộ kinh doanh nhỏ lẻ tự tay sản xuất đồ thủ công mỹ nghệ (gốm sứ, mây tre, đồ gỗ decor). Toàn bộ thời gian và nhân lực phải dồn vào việc **tập trung làm ra sản phẩm** (đòi hỏi sự tỉ mỉ, công sức lao động tay chân), không có thời gian ngồi chat nhắn tin qua lại cả ngày giữa khách và nhà vận chuyển để chờ báo giá.<br>  - Muốn bán trực tiếp cho khách nước ngoài (cả đối tác B2B như quán cafe, shop decor nhỏ, lẫn khách mua lẻ B2C) để tối ưu lợi nhuận; **nhất quyết không muốn thông qua các công ty thương mại/trung gian xuất nhập khẩu** vì bị ép giá thu mua, mất biên lợi nhuận và mất thương hiệu xưởng.<br>  - Hiện tại, để có giá tốt, gia đình phải tự lên các **Group Facebook, Group Zalo logistics** để đăng bài, lùng sục tìm kiếm từng nhà xe/forwarder nhỏ chạy tuyến tiểu ngạch hoặc chính ngạch. Việc này cực kỳ thủ công, tốn thời gian, thông tin phân mảnh và dễ bị lừa đảo hoặc ép cước. |
+| Quy trình hiện tại (3–7 bước) | - Bước 1: Khách nước ngoài (B2B đặt sỉ hoặc B2C mua lẻ) nhắn tin hỏi giá đơn hàng gồm nhiều mẫu kích thước khác nhau.<br>- Bước 2: Chủ xưởng phải buông tay làm sản phẩm, lấy thước đo đạc, tự đoán cách xếp vào mấy thùng xốp/carton.<br>- Bước 3: Lên các Group Facebook, Zalo logistics đăng bài tìm mối ship hoặc nhắn tin riêng cho 3–5 nhà xe/forwarder nhỏ để dọ giá (hỏi giá tiểu ngạch, chuyên tuyến bay, gom biển).<br>- Bước 4: Nhắn tin qua lại giải thích chất liệu, kích thước; mòn mỏi chờ đợi từng bên trả lời báo giá (mất từ vài tiếng đến 1–2 ngày).<br>- Bước 5: Nhận báo giá mỗi bên một kiểu, tự cộng trừ nhân chia thủ công rồi mới báo lại cho khách; lúc này khách đã hủy đơn hoặc mua xưởng khác. |
+| Bottleneck (bước nào, mất bao nhiêu phút) | - Bước 2 (đo đạc, tính toán đóng gói) và Bước 3–4 (lùng sục trên group Facebook/Zalo, nhắn tin dọ giá, chờ đợi phản hồi).<br>- Mất từ 1 đến 2 ngày cho một lần báo giá; mất 40% thời gian lao động trong ngày lẽ ra dùng để sản xuất hàng.<br>- Rủi ro bị forwarder phạt tiền cước thể tích (CBM) vượt mức từ 15% – 30% giá trị lô hàng. |
+| Impact (nếu không giải thì sao) | - Mất khách hàng tiềm năng (cả B2B và B2C) vì phản hồi quá chậm trễ (khách chuyển sang mua xưởng Trung Quốc/Philippines vì họ báo giá trọn gói trong vài giờ).<br>- Chủ xưởng bị kiệt sức vì vừa phải sản xuất vừa phải làm 'môi giới logistics' đi dọ giá; năng suất làm hàng thủ công bị sụt giảm.<br>- Gia đình luôn có tâm lý bất an, sợ nhận đơn xuất khẩu lớn dù sản phẩm làm ra rất đẹp. |
+| Success metric (baseline → target) | - Thời gian báo giá trọn gói cho khách: từ 24–48 giờ giảm xuống **dưới 15 phút**.<br>- Thời gian chủ xưởng phải bỏ ra dọ giá: giảm từ 2–3 tiếng/ngày xuống **dưới 5 phút/đơn**.<br>- Tỷ lệ sai lệch giữa cước ước tính và chi phí thực tế: dưới 10%.<br>- Tỷ lệ chốt đơn xuất khẩu thành công: tăng ít nhất 25%. |
+| Phương án không dùng AI | - Lập bảng tính Excel mẫu cố định kích thước 3 cỡ thùng và lưu số điện thoại 5 forwarder ruột (Vẫn không giải quyết được việc phải nhắn tin thủ công và giá cước thị trường thay đổi liên tục). |
+| Giả thuyết về AI (nếu có) | - Thuật toán 3D Bin Packing tự động tính cách xếp thùng tối ưu diện tích.<br>- Hệ thống kết nối và tập hợp sẵn các đầu hướng chi phí (tiểu ngạch/chính ngạch/chuyên tuyến) từ các forwarder nhỏ.<br>- AI trích xuất tin nhắn/ảnh báo giá từ Zalo về một bảng so sánh tập trung. |
+| Cảm nhận nhanh | Rule / Thuật toán hình học + Hệ thống tập hợp cước + Workflow có AI (chưa cần Agent). |
 
 Quy trình nháp hiện tại:
 
 ```text
-[Khách B2B gửi đơn nhiều mẫu] 
-  → [Đo đạc & đoán số thùng (Tốn 45p, dễ tính thiếu CBM)] 
-  → [Nhắn tin 3-4 Forwarder dọ giá] 
-  → [Chờ 1-2 ngày hỏi qua lại về giấy tờ & phụ phí] 
-  → [Tính nhẩm cước & Báo giá khách (Dễ mất đơn vì quá chậm)]
+[Khách B2B/B2C hỏi giá nhiều mẫu] 
+  → [Bỏ dở làm hàng, tự đo đạc đoán số thùng] 
+  → [Lên Group Facebook/Zalo đăng bài tìm mối ship nhỏ/tiểu ngạch] 
+  → [Nhắn tin qua lại 3-5 bên, mòn mỏi chờ báo giá 1-2 ngày] 
+  → [Tự tính nhẩm trọn gói & Báo khách (Dễ mất đơn vì quá trễ)]
 ```
-
 ### Problem Card #2
 
 | Trường | Nội dung |
@@ -118,8 +117,8 @@ Quy trình nháp hiện tại:
 ### Card muốn pitch nhất
 
 - Card số: **#1**
-- Vì sao: Xuất phát từ nỗi trăn trở có thật của gia đình tôi; thị trường hàng thủ công Việt Nam xuất B2B trực tiếp tiềm năng rất lớn nhưng bị nghẽn nghiêm trọng ở khâu tính thể tích đóng gói và cước vận chuyển.
-- Câu hỏi muốn nhóm phản biện: "Làm sao để các đơn vị forwarder nhỏ chịu tham gia báo giá qua hệ thống mà không sợ bị lộ bí mật giá cước với đối thủ cạnh tranh?"
+- Vì sao: Xuất phát từ thực tế gia đình tôi: hộ kinh doanh nhỏ lẻ cần thời gian để tập trung LÀM RA SẢN PHẨM thủ công chứ không thể bỏ dở tay chân cả ngày để đi săn mối dọ giá trên các hội nhóm Facebook/Zalo. Chúng tôi muốn bán thẳng cho khách B2B/B2C nước ngoài không qua trung gian XNK để giữ lợi nhuận, và cần tiếp cận mạng lưới các forwarder nhỏ có giá tiểu ngạch/chính ngạch tốt nhất.
+- Câu hỏi muốn nhóm phản biện: "Làm sao để hệ thống tập hợp được nhanh các đầu hướng chi phí và tuyến đường (tiểu ngạch/chính ngạch) từ các forwarder nhỏ lẻ mà vẫn đảm bảo tính riêng tư, không làm họ e ngại bị lộ giá cước với đối thủ?"
 
 ### AI đã phản biện card thế nào
 
