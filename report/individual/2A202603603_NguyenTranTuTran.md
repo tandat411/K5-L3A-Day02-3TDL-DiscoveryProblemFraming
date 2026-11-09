@@ -1,4 +1,4 @@
-﻿# Báo cáo cá nhân — 2A202603603_NguyenTranTuTran
+# Báo cáo cá nhân — 2A202603603_NguyenTranTuTran
 
 > Đổi tên file theo quy tắc `MSSV_HoTen.md`, ví dụ `20241234_NguyenVanAn.md` (MSSV trước, dấu `_`, họ tên viết liền không dấu). Sửa cả dòng tiêu đề phía trên cho khớp.
 > Template chi tiết và prompt mẫu cho từng mục: [docs/01-worksheet.md](../../docs/01-worksheet.md).
@@ -45,7 +45,7 @@ Lăng kính: **Lặp lại** · **Tốn thời gian** · **Cần đọc, tổng 
 | Rank | Problem | Vì sao chọn | Điều còn chưa chắc |
 |---:|---|---|---|
 | 1 | Tập hợp đầu hướng chi phí & tính đóng gói cho hộ thủ công nhỏ lẻ (B2B/B2C) | Xuất phát từ nỗi đau thực tế của gia đình tôi: hộ nhỏ tự làm sản phẩm, không có thời gian đi chat dọ giá trên group Facebook/Zalo, không muốn qua trung gian XNK ăn chênh lệch, cần kết nối các nhà xe/forwarder nhỏ có giá tiểu ngạch/chính ngạch tốt. | Cách thức kết nối và cập nhật biểu phí linh hoạt từ các đơn vị logistics nhỏ/tư nhân. |
-| 2 | Đối soát thanh toán & mã đơn hàng cuối ngày | Tốn thời gian lặp lại mỗi ngày của kế toán/chủ xưởng; dễ sót tiền khi khách ghi sai cú pháp chuyển khoản. | Mức độ hỗ trợ kết nối dữ liệu tự động từ các ngân hàng nội địa. |
+| 2 | Tổng kết chi phí cá nhân & xưởng nhỏ đa ví qua Box Chat và Google Sheets | Người dùng chi tiêu qua nhiều ví (MoMo, Visa, Apple Pay...), ngại nhập tay và lo sợ vấn đề bảo mật khi liên kết tài khoản ngân hàng với app lạ; cần một cách nạp chi phí nhanh qua box chat ghi vào Sheets riêng tư. | Khả năng AI phân loại đúng hạng mục và thói quen gửi tin nhắn/ảnh của người dùng. |
 | 3 | Editor nộp bản dựng video & kiểm duyệt checklist | Mất 2–3 tiếng/ngày của người quản lý; chất lượng nhân sự không đều làm kéo dài thời gian sửa đi sửa lại. | AI có đánh giá được cảm xúc và nhịp điệu video hay chỉ dừng lại ở việc soi lỗi kỹ thuật thô. |
 
 ### Problem Card #1
@@ -76,23 +76,26 @@ Quy trình nháp hiện tại:
 
 | Trường | Nội dung |
 |---|---|
-| Job Story | Khi đối chiếu sao kê ngân hàng với danh sách đơn hàng đã xuất kho, tôi muốn tự động đánh dấu các giao dịch trùng khớp mã đơn, để đóng sổ kế toán cuối ngày đúng giờ mà không phải dò tay từng giao dịch. |
-| Actor | Kế toán nội bộ, Chủ xưởng kinh doanh. |
-| Thời điểm / bối cảnh | Cuối ngày làm việc, phát sinh 50–100 giao dịch chuyển khoản với nội dung thanh toán lộn xộn, viết tắt. |
-| Quy trình hiện tại (3–7 bước) | 1. Tải sao kê ngân hàng (Excel/PDF) → 2. Mở sổ theo dõi đơn hàng → 3. Đọc từng dòng nội dung chuyển khoản → 4. Tìm mã đơn tương ứng → 5. Đánh dấu đã thanh toán, gọi hỏi lại đơn viết sai. |
-| Bottleneck (bước nào, mất bao nhiêu phút) | Bước 3 và 4: Mất 45–60 phút mỗi chiều; 10–15% khách ghi sai cú pháp phải gọi điện xác minh. |
-| Impact (nếu không giải thì sao) | Dồn ứ công nợ, chậm trễ lịch xuất kho giao hàng cho khách. |
-| Success metric (baseline → target) | Thời gian đối soát giảm từ 60 phút xuống dưới 10 phút; tự động khớp đúng ≥ 85% giao dịch. |
-| Phương án không dùng AI | Dùng hàm Excel (VLOOKUP, INDEX-MATCH) kết hợp tạo mã QR thanh toán chuẩn cú pháp. |
-| Giả thuyết về AI (nếu có) | Dùng thuật toán so khớp chuỗi gần đúng (Fuzzy Matching) để nhận diện tên khách hàng và mã đơn khi bị viết tắt. |
-| Cảm nhận nhanh | Rule / Thuật toán (No AI là chính). |
+| Job Story | Khi phát sinh các khoản chi tiêu rải rác trên nhiều ví điện tử và thẻ ngân hàng (MoMo, ShopeePay/AirPay, Apple Pay, Visa...), tôi muốn chỉ cần gửi ảnh chụp biên lai hoặc gõ nhanh vào box chat để tự động tính toán và tổng hợp vào Google Sheets cá nhân, để cuối tháng có bảng tổng kết chi phí chính xác mà không phải nhập tay từng dòng và không phải lo lộ thông tin tài khoản ngân hàng cho ứng dụng lạ. |
+| Actor | Cá nhân tự quản lý tài chính, Chủ hộ kinh doanh nhỏ (tự làm mọi việc, không có bộ phận kế toán riêng). |
+| Thời điểm / bối cảnh | - **Chi tiêu phân mảnh trên quá nhiều nền tảng số:** Hàng ngày tiền ra tiền vào trên 4–5 kênh khác nhau: ví MoMo, ShopeePay (AirPay), Apple Pay, thẻ tín dụng Visa/Mastercard và tài khoản ngân hàng.<br>- **Nỗi lo bảo mật & Lòng tin:** Người dùng KHÔNG THỂ và KHÔNG DÁM kết nối trực tiếp tài khoản ngân hàng hay ví điện tử vào các ứng dụng quản lý tài chính của bên thứ ba vì lo sợ rò rỉ mật khẩu, mã OTP và mất an toàn thông tin tài chính.<br>- **Khác biệt Cá nhân vs Doanh nghiệp:** Doanh nghiệp có kế toán lo đối soát chứng từ, còn cá nhân và chủ hộ nhỏ phải tự làm 100%. Vì lười nhập tay từng dòng vào app nên thường bỏ cuộc chỉ sau 1–2 tuần.<br>- **Nhu cầu cốt lõi:** Người dùng muốn dùng một **Box Chat** quen thuộc (Zalo/Telegram) để tiện tay nạp ảnh biên lai hoặc gõ vài chữ vắn tắt, sau đó hệ thống tự động bóc tách và ghi thẳng vào **Google Sheets cá nhân của họ** (đảm bảo tính bảo mật và người dùng toàn quyền làm chủ dữ liệu). |
+| Quy trình hiện tại (3–7 bước) | 1. Thanh toán tiền chi tiêu qua nhiều ví/thẻ khác nhau (MoMo, Apple Pay, quẹt thẻ Visa...).<br>2. Lưu lại ảnh chụp màn hình chuyển khoản hoặc giữ biên lai giấy trong ví/điện thoại.<br>3. Cuối tuần hoặc cuối tháng mở từng app ngân hàng/ví điện tử để lội lại lịch sử giao dịch.<br>4. Mở Google Sheets ngồi gõ tay từng con số, ngày tháng, tên khoản chi.<br>5. Tự cộng trừ phân loại; thường bị quên khoản chi tiền mặt hoặc nản lòng bỏ dở giữa chừng vì quá mất công. |
+| Bottleneck (bước nào, mất bao nhiêu phút) | Bước 3 và Bước 4: Mất **2–3 tiếng mỗi tháng** lục lại 4–5 app và gõ tay vào bảng tính; tỷ lệ nản lòng bỏ cuộc > 80%; số liệu thu chi luôn bị lệch 15–20% so với thực tế ví tiền. |
+| Impact (nếu không giải thì sao) | Mất kiểm soát dòng tiền cá nhân và chi phí vận hành xưởng nhỏ; không nắm được tiền đi đâu, không tích lũy được tiền và không dám đầu tư mở rộng kinh doanh. |
+| Success metric (baseline → target) | - Thời gian ghi nhận một khoản chi: từ 2–3 phút (mở app gõ tay) giảm xuống **dưới 5 giây** (quăng ảnh/gõ 1 câu vào box chat).<br>- Tỷ lệ duy trì theo dõi chi tiêu: tăng từ 2 tuần lên **duy trì đều đặn 100% các tháng**.<br>- Độ chính xác khi bóc tách số tiền và phân loại vào Google Sheets: đạt ≥ 90%. |
+| Phương án không dùng AI | Tự tạo biểu mẫu Google Forms hoặc mở Google Sheets trên điện thoại gõ tay (Vẫn phải điền nhiều trường thông tin, rất bất tiện khi đang đi ngoài đường nên người dùng vẫn lười và bỏ cuộc). |
+| Giả thuyết về AI (nếu có) | Dùng LLM kết hợp Vision (OCR) trong Box Chat: Đọc ảnh chụp biên lai giao dịch hoặc câu gõ tắt (ví dụ: 'cơm trưa 45k momo') ➔ Trích xuất thành JSON: [Số tiền, Ngày, Nguồn ví, Hạng mục] ➔ Tự động ghi vào Google Sheets riêng tư của người dùng. |
+| Cảm nhận nhanh | Workflow có AI (OCR/LLM parsing) + Google Sheets API (đảm bảo bảo mật tuyệt đối vì dữ liệu nằm trên tài khoản Google của chính người dùng). |
 
 Quy trình nháp hiện tại:
 
 ```text
-[Tải sao kê ngân hàng] → [Dò mắt từng dòng tìm mã đơn] → [Xử lý các dòng ghi sai cú pháp] → [Cập nhật sổ nợ thủ công]
+[Chi tiêu rải rác đa ví (MoMo/Visa/Apple Pay)] 
+  → [Dồn ảnh biên lai & tin nhắn trong điện thoại] 
+  → [Cuối tháng mở 4-5 app lục lại lịch sử giao dịch] 
+  → [Ngồi gõ tay từng dòng vào Google Sheets (Rất nản, dễ bỏ cuộc)] 
+  → [Mất kiểm soát dòng tiền vì bỏ dở giữa chừng]
 ```
-
 ### Problem Card #3
 
 | Trường | Nội dung |
