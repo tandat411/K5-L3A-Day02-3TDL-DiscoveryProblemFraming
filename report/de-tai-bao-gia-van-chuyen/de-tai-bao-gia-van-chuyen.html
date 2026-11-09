@@ -1,0 +1,408 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Báo Giá Liền Tay</title>
+<style>
+:root{
+  --bg:#f7f5f0;--surface:#ffffff;--surface-2:#f0ece3;--text:#1f1d1a;--muted:#6b665d;
+  --line:#e2ddd2;--accent:#b4532a;--accent-soft:#f6e3d8;--ok:#2f7a4f;--ok-soft:#dcefe3;
+  --warn:#a86b00;--warn-soft:#f8ebcc;--bad:#b23a3a;--bad-soft:#f6dcdc;--radius:14px;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#171614;--surface:#211f1c;--surface-2:#2a2824;--text:#ede9e1;--muted:#a39d92;
+    --line:#38352f;--accent:#e58a5c;--accent-soft:#3a271d;--ok:#6cc792;--ok-soft:#1f3328;
+    --warn:#e2b04a;--warn-soft:#3a2f17;--bad:#e57a7a;--bad-soft:#3a2020;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#171614;--surface:#211f1c;--surface-2:#2a2824;--text:#ede9e1;--muted:#a39d92;
+  --line:#38352f;--accent:#e58a5c;--accent-soft:#3a271d;--ok:#6cc792;--ok-soft:#1f3328;
+  --warn:#e2b04a;--warn-soft:#3a2f17;--bad:#e57a7a;--bad-soft:#3a2020;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--text);font:16px/1.6 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+.wrap{max-width:1040px;margin:0 auto;padding:0 16px}
+header{padding:56px 0 32px}
+.eyebrow{color:var(--accent);font-weight:600;font-size:13px;letter-spacing:.08em;text-transform:uppercase}
+h1{font-size:clamp(28px,5vw,44px);line-height:1.15;margin:8px 0 16px;letter-spacing:-.01em}
+h2{font-size:clamp(22px,3.4vw,30px);margin:0 0 6px;letter-spacing:-.01em}
+h3{font-size:18px;margin:0 0 8px}
+p{margin:0 0 12px}
+.lead{font-size:18px;color:var(--muted);max-width:760px}
+nav.toc{display:flex;flex-wrap:wrap;gap:8px;margin-top:20px}
+nav.toc a{color:var(--text);text-decoration:none;border:1px solid var(--line);background:var(--surface);padding:6px 12px;border-radius:999px;font-size:14px}
+nav.toc a:hover{border-color:var(--accent)}
+section{padding:36px 0;border-top:1px solid var(--line)}
+.num{display:inline-flex;width:32px;height:32px;border-radius:50%;background:var(--accent);color:#fff;align-items:center;justify-content:center;font-weight:700;margin-right:10px;font-size:15px;vertical-align:3px}
+.sub{color:var(--muted);margin-bottom:24px}
+.grid{display:grid;gap:14px}
+.g2{grid-template-columns:repeat(auto-fit,minmax(280px,1fr))}
+.g3{grid-template-columns:repeat(auto-fit,minmax(230px,1fr))}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:18px}
+.card.soft{background:var(--surface-2)}
+.card p:last-child{margin-bottom:0}
+.tag{display:inline-block;font-size:12px;font-weight:600;padding:2px 8px;border-radius:999px;margin-right:4px}
+.t-ai{background:var(--accent-soft);color:var(--accent)}
+.t-rule{background:var(--ok-soft);color:var(--ok)}
+.t-human{background:var(--warn-soft);color:var(--warn)}
+.flow{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:8px;counter-reset:s}
+.flow div{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:10px 12px;font-size:14px;position:relative}
+.flow div::before{counter-increment:s;content:counter(s);display:block;font-weight:700;color:var(--muted);font-size:12px}
+.flow.bad div{border-left:3px solid var(--bad)}
+.flow.good div{border-left:3px solid var(--ok)}
+.label{font-weight:600;font-size:14px;margin:18px 0 8px}
+.table-scroll{overflow-x:auto;border:1px solid var(--line);border-radius:var(--radius);background:var(--surface)}
+table{border-collapse:collapse;width:100%;font-size:14.5px}
+th,td{padding:10px 12px;text-align:left;vertical-align:top;border-bottom:1px solid var(--line)}
+th{background:var(--surface-2);font-weight:600;white-space:nowrap}
+tr:last-child td{border-bottom:none}
+.lvl{font-weight:600;font-size:12px;padding:2px 8px;border-radius:999px;white-space:nowrap}
+.hi{background:var(--bad-soft);color:var(--bad)}
+.mid{background:var(--warn-soft);color:var(--warn)}
+.timeline{display:grid;gap:12px}
+.phase{display:grid;grid-template-columns:120px 1fr;gap:14px;background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:16px}
+.phase .when{color:var(--accent);font-weight:700}
+.phase .when small{display:block;color:var(--muted);font-weight:400}
+.phase .gate{margin-top:6px;font-size:14px;color:var(--ok)}
+@media (max-width:560px){.phase{grid-template-columns:1fr;gap:4px}}
+.score{display:grid;grid-template-columns:minmax(150px,1.2fr) 2fr 36px;gap:10px;align-items:center;padding:9px 0;border-bottom:1px solid var(--line);font-size:14.5px}
+.score:last-child{border-bottom:none}
+.bar{height:10px;background:var(--surface-2);border-radius:999px;overflow:hidden}
+.bar i{display:block;height:100%;background:var(--accent);border-radius:999px}
+.score b{text-align:right}
+.callout{border-left:4px solid var(--accent);background:var(--accent-soft);padding:14px 16px;border-radius:0 var(--radius) var(--radius) 0}
+.note{font-size:13px;color:var(--muted)}
+ul{margin:0;padding-left:20px}
+li{margin-bottom:4px}
+ul.cmp{list-style:none;padding:0}
+ul.cmp li{padding:10px 0;border-bottom:1px solid var(--line);margin:0}
+ul.cmp li:first-child{padding-top:0}
+ul.cmp li:last-child{border-bottom:none;padding-bottom:0}
+.gap{color:var(--muted);font-size:14px}
+footer{padding:28px 0 48px;border-top:1px solid var(--line);color:var(--muted);font-size:13px}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <div class="eyebrow">Đề tài · Discovery &amp; Problem Framing</div>
+  <h1>Báo Giá Liền Tay: báo giá vận chuyển trong vài phút cho hộ làm hàng thủ công bán sang Mỹ</h1>
+  <p class="lead">Nền tảng web và chatbot chi phí thấp, kết nối <strong>hộ kinh doanh hàng thủ công</strong> với <strong>nhà cung cấp vận chuyển nhỏ</strong>. Nhập sản phẩm một lần, hệ thống tự tính đóng gói, gửi yêu cầu báo giá chuẩn và gom báo giá về một bảng so sánh riêng tư.</p>
+  <nav class="toc">
+    <a href="#van-de">Vấn đề</a>
+    <a href="#gia-tri">1 · Giá trị &amp; tính năng</a>
+    <a href="#ke-hoach">2 · Kế hoạch &amp; rủi ro</a>
+    <a href="#danh-gia">3 · Đánh giá bài toán</a>
+  </nav>
+</header>
+
+<section id="van-de">
+  <h2>Vấn đề hiện tại</h2>
+  <p class="sub">Khách Mỹ hỏi: "50 bình gốm mẫu A và 20 giỏ mây mẫu B, giao tới Texas giá bao nhiêu?". Để trả lời, hộ kinh doanh phải:</p>
+  <div class="flow bad">
+    <div>Tự đo, tự đoán xếp được mấy thùng</div>
+    <div>Nhắn Zalo / Facebook cho 3–5 NCC vận chuyển</div>
+    <div>Gửi lại ảnh, kích thước, số lượng cho từng nơi</div>
+    <div>Trả lời câu hỏi bổ sung: hàng gỗ? hun trùng? giao tận nhà?</div>
+    <div>Chờ báo giá, mỗi nơi tính một kiểu (kg, CBM, có hoặc chưa có phụ phí)</div>
+    <div>Tự quy đổi, so sánh rồi mới báo cho khách</div>
+  </div>
+  <div class="grid g3" style="margin-top:16px">
+    <div class="card"><h3>Nhắn đi nhắn lại</h3><p>Cùng một bộ thông tin gửi lại cho từng NCC, mỗi nơi lại hỏi thêm một kiểu.</p></div>
+    <div class="card"><h3>Dễ báo giá thiếu</h3><p>Hàng thủ công <strong>nhẹ nhưng cồng kềnh</strong>, bị tính theo cân nặng quy đổi (thể tích) chứ không theo cân thật.</p></div>
+    <div class="card"><h3>Giấy tờ không rõ</h3><p>Không biết NCC có lo invoice, packing list, C/O, hun trùng, khai báo hàng gỗ / mây tre khi vào Mỹ hay không.</p></div>
+  </div>
+</section>
+
+<section id="gia-tri">
+  <h2><span class="num">1</span>Giá trị và tính năng của sản phẩm</h2>
+  <p class="sub">Giá trị cho cả hai phía của thị trường. Phía NCC chỉ tham gia khi họ cũng được lợi.</p>
+
+  <div class="grid g2">
+    <div class="card">
+      <h3>Cho hộ kinh doanh</h3>
+      <ul>
+        <li>Có giá ship ước tính <strong>trong vài phút</strong> thay vì chờ vài ngày</li>
+        <li>Nhập thông tin sản phẩm một lần, dùng lại cho mọi đơn</li>
+        <li>So sánh nhiều NCC theo <strong>cùng một chuẩn</strong>: tổng chi phí, thời gian, giấy tờ</li>
+        <li>Biết trước giấy tờ cần có, tránh bị giữ hàng</li>
+        <li>Có sẵn bản nháp báo giá tiếng Anh gửi khách</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>Cho NCC vận chuyển</h3>
+      <ul>
+        <li>Nhận yêu cầu <strong>đã đủ thông tin</strong>: số thùng, cân nặng, loại hàng, điểm đến</li>
+        <li>Bớt thời gian tư vấn những khách không chốt</li>
+        <li>Có khách mới mà <strong>không phải công khai bảng giá</strong></li>
+        <li>Chỉ trả phí khi chốt được lô hàng</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="label">Quy trình mới</div>
+  <div class="flow good">
+    <div>Chọn mẫu và số lượng trong kho sản phẩm</div>
+    <div>Hệ thống tính số thùng, cân nặng quy đổi, gợi ý hình thức vận chuyển</div>
+    <div>Chatbot hỏi bù thông tin thiếu</div>
+    <div>Gửi một yêu cầu chuẩn tới 3–5 NCC phù hợp</div>
+    <div>AI đọc các báo giá về một bảng so sánh riêng</div>
+    <div>Chọn NCC, xuất báo giá tiếng Anh cho khách</div>
+  </div>
+
+  <div class="label">Tính năng và vai trò của AI</div>
+  <div class="table-scroll"><table>
+    <thead><tr><th>Tính năng</th><th>Làm gì</th><th>Ai / cái gì xử lý</th></tr></thead>
+    <tbody>
+      <tr><td>Kho sản phẩm + thư viện dùng chung</td><td>Kích thước, cân nặng, chất liệu, cách đóng gói; so khớp với mẫu tương đồng doanh nghiệp khác đã kiểm chứng</td><td><span class="tag t-ai">AI ước tính lúc đầu</span><span class="tag t-ai">AI so khớp về sau</span></td></tr>
+      <tr><td>Tính đóng gói</td><td>Số thùng, cân nặng thật và quy đổi, CBM; đầu vào lấy từ thư viện hoặc AI</td><td><span class="tag t-rule">Công thức</span></td></tr>
+      <tr><td>Gợi ý hình thức vận chuyển</td><td>Chuyển phát nhanh, hàng không hay đường biển gom hàng</td><td><span class="tag t-rule">Rule</span><span class="tag t-ai">AI giải thích</span></td></tr>
+      <tr><td>Yêu cầu báo giá chuẩn</td><td>Gom đủ thông tin, gửi cùng lúc cho nhiều NCC</td><td><span class="tag t-ai">Chatbot AI</span></td></tr>
+      <tr><td>Đọc báo giá NCC</td><td>Tin nhắn, ảnh, PDF thành một bảng so sánh</td><td><span class="tag t-ai">AI trích xuất</span><span class="tag t-human">Người xác nhận</span></td></tr>
+      <tr><td>Giấy tờ hải quan</td><td>Danh sách theo loại hàng, NCC nào hỗ trợ</td><td><span class="tag t-ai">AI gợi ý</span><span class="tag t-human">Người duyệt</span></td></tr>
+      <tr><td>Báo giá cho khách Mỹ</td><td>Ghép giá hàng và giá ship thành bản tiếng Anh</td><td><span class="tag t-ai">AI soạn</span><span class="tag t-human">Người bán sửa</span></td></tr>
+      <tr><td>Chốt giá, chọn NCC</td><td>Quyết định cuối cùng</td><td><span class="tag t-human">Con người</span></td></tr>
+    </tbody>
+  </table></div>
+
+  <div class="grid g2" style="margin-top:16px">
+    <div class="card soft">
+      <h3>Có nên dùng AI?</h3>
+      <p><strong>Có, và AI quan trọng nhất lúc chưa có dữ liệu.</strong> Lúc đầu AI phân tích ảnh, mô tả, kích thước để ước tính đóng gói. Về sau hệ thống tái sử dụng dữ liệu đã kiểm chứng từ nhiều doanh nghiệp, AI chuyển sang so khớp và gộp nhiều trường hợp.</p>
+      <p>Mức phù hợp: <strong>Workflow có bước AI + vòng lặp dữ liệu</strong>, không phải Agent tự quyết. Phép tính tiền vẫn dùng công thức.</p>
+    </div>
+    <div class="card soft">
+      <h3>NCC không muốn bị so giá: xử lý thế nào?</h3>
+      <ul>
+        <li>Không có bảng giá công khai; báo giá chỉ hiện cho người đã hỏi</li>
+        <li>Xếp hạng theo tổng điểm: giá, thời gian, giấy tờ, độ chính xác, tốc độ phản hồi</li>
+        <li>Mỗi yêu cầu chỉ gửi tới 3–5 NCC</li>
+        <li>Giá ước tính của hệ thống là khoảng giá theo công thức chung</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="label">Chiến lược dữ liệu: từ AI ước tính đến thư viện dùng chung</div>
+  <div class="callout" style="margin-bottom:14px">
+    <p>Một mẫu thủ công (bình gốm 30 cm, giỏ mây 40 cm, đèn lồng tre…) <strong>không chỉ một hộ làm</strong>. Kích thước và cách đóng gói đo được ở một hộ dùng lại được cho hộ khác. Mỗi lô hàng thật góp vào một <strong>thư viện chung</strong>: càng nhiều doanh nghiệp dùng thì ước tính càng chính xác cho tất cả.</p>
+  </div>
+  <div class="grid g3">
+    <div class="card">
+      <h3>A · Khởi đầu</h3>
+      <p class="note">Chưa có dữ liệu</p>
+      <p>AI phân tích ảnh, mô tả, kích thước, rồi ước tính số cái mỗi thùng, kích thước thùng, vật liệu chèn, cân nặng.</p>
+      <p><span class="lvl mid">Độ tin cậy thấp · khoảng giá rộng</span></p>
+    </div>
+    <div class="card">
+      <h3>B · Tích luỹ</h3>
+      <p class="note">Có vài lô thật</p>
+      <p>So ước tính với số NCC cân đo thật khi nhận hàng. AI học sai lệch và chỉnh lại.</p>
+      <p><span class="lvl mid">"Dựa trên 3 lô thật"</span></p>
+    </div>
+    <div class="card" style="border-color:var(--ok)">
+      <h3>C · Tái sử dụng</h3>
+      <p class="note">Nhiều lô, nhiều doanh nghiệp</p>
+      <p>Sản phẩm mới được so khớp với mẫu tương đồng trong thư viện và dùng thẳng số đã kiểm chứng, áp dụng cho doanh nghiệp khác.</p>
+      <p><span class="tag t-rule">"Đã kiểm chứng qua 12 lô" · khoảng giá hẹp</span></p>
+    </div>
+  </div>
+
+  <div class="grid g3" style="margin-top:14px">
+    <div class="card">
+      <h3>Dữ liệu lấy từ đâu</h3>
+      <ul>
+        <li><strong>1.</strong> NCC cân đo thật khi nhận hàng (tin cậy nhất; NCC vốn phải cân để tính cước)</li>
+        <li><strong>2.</strong> Hoá đơn cước thật sau khi giao</li>
+        <li><strong>3.</strong> Người bán tự đo</li>
+        <li><strong>4.</strong> AI ước tính từ ảnh (thấp nhất)</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>AI phân tích nhiều trường hợp</h3>
+      <ul>
+        <li>So khớp sản phẩm tương đồng dù mỗi hộ đặt tên khác</li>
+        <li>Xếp nhiều mẫu khác nhau vào ít thùng nhất</li>
+        <li>Học hệ số cồng kềnh, cách chèn ít vỡ, tuyến hay phát sinh phụ phí</li>
+        <li>Phát hiện số bất thường (nhầm cm và mm)</li>
+        <li>Lưu khoảng min–max vì mỗi cái thủ công hơi khác nhau</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>Quy tắc dùng chung</h3>
+      <ul>
+        <li>Chỉ chia sẻ thông số vật lý đã ẩn danh</li>
+        <li>Không chia sẻ tên hộ, giá bán, khách hàng, ảnh mẫu độc quyền</li>
+        <li>"Đã kiểm chứng" khi có ≥ 3 lô thật từ ≥ 2 doanh nghiệp</li>
+        <li>Số lệch nhiều thì chờ duyệt, không tự gộp</li>
+        <li>Hộ tự chọn đồng ý chia sẻ ẩn danh</li>
+      </ul>
+    </div>
+  </div>
+  <p class="note" style="margin-top:10px">Không chọn bảng tính thủ công cho từng hộ: mỗi hộ tự tính từ đầu, dữ liệu nằm rời rạc, không đối chiếu với lô thật, không dùng lại được. Bảng tính chỉ dùng làm mốc để so độ chính xác.</p>
+</section>
+
+<section id="ke-hoach">
+  <h2><span class="num">2</span>Kế hoạch phát triển và rủi ro</h2>
+  <p class="sub">AI ước tính trước, dữ liệu thật tích luỹ dần. Mỗi giai đoạn có tiêu chí qua cửa. Thời gian là giả định.</p>
+
+  <div class="timeline">
+    <div class="phase"><div class="when">GĐ 0<small>2 tuần</small></div><div><h3>Khám phá</h3><p>Phỏng vấn 8–10 hộ kinh doanh và 4–5 NCC; thu 20 báo giá thật; đo thời gian báo giá hiện tại.</p><div class="gate">Qua cửa: ≥ 60% hộ xác nhận đây là nút thắt; ≥ 3 NCC chịu thử</div></div></div>
+    <div class="phase"><div class="when">GĐ 1<small>4–6 tuần</small></div><div><h3>MVP dữ liệu + AI</h3><p>Web đơn giản nhập ảnh, kích thước, số lượng; AI ước tính đóng gói; NCC đối tác ghi số cân đo thật mỗi lô vào thư viện; người vận hành vẫn gửi yêu cầu tới NCC thay hộ.</p><div class="gate">Qua cửa: đo được sai số ước tính; thời gian báo giá giảm ≥ 50%; mỗi nhóm hàng chính có ≥ 3 lô thật</div></div></div>
+    <div class="phase"><div class="when">GĐ 2<small>6–8 tuần</small></div><div><h3>Web + chatbot</h3><p>Kho sản phẩm, tính đóng gói, chatbot gom thông tin, cổng NCC trả lời, AI đọc báo giá, bảng so sánh riêng.</p><div class="gate">Qua cửa: 20 hộ dùng thường xuyên; NCC trả lời trung bình dưới 4 giờ</div></div></div>
+    <div class="phase"><div class="when">GĐ 3<small>sau 3 tháng</small></div><div><h3>Mở rộng và thu phí</h3><p>NCC tự nhập bảng giá riêng để hệ thống tự báo giá; danh sách giấy tờ theo ngành hàng; đánh giá sau giao hàng; phí theo lô chốt.</p><div class="gate">Qua cửa: có doanh thu; báo giá lệch hoá đơn dưới 10%</div></div></div>
+  </div>
+
+  <div class="label">Thu thập dữ liệu và nguồn thu</div>
+  <div class="grid g3">
+    <div class="card">
+      <h3>Lấy dữ liệu từ hộ kinh doanh</h3>
+      <ul>
+        <li>Công cụ miễn phí làm "mồi": kho sản phẩm, tính đóng gói, mẫu báo giá tiếng Anh</li>
+        <li>Nhập bằng ảnh, chatbot hoặc Zalo; AI điền sẵn, người bán xác nhận</li>
+        <li>Ưu đãi lô đầu do NCC tài trợ khi nhập đủ thông tin</li>
+        <li>Đi qua hiệp hội làng nghề, chương trình xúc tiến xuất khẩu, nhóm bán hàng Etsy</li>
+        <li>Lưu kích thước thùng và hoá đơn thật sau mỗi lô</li>
+        <li>Dữ liệu thuộc về hộ; không bán dữ liệu</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>Chi phí vận hành (MVP)</h3>
+      <ul>
+        <li>Hosting, cơ sở dữ liệu: gần như 0 đồng (gói miễn phí)</li>
+        <li>AI: trả theo lượt, chỉ ở vài bước, chi phí nhỏ</li>
+        <li><strong>Người vận hành</strong>: chi phí lớn nhất giai đoạn làm tay</li>
+        <li>Tên miền, Zalo OA / Telegram bot: thấp</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>Thu tiền từ đâu</h3>
+      <ul>
+        <li><strong>1.</strong> NCC trả phí theo lô chốt thành công (nguồn chính)</li>
+        <li><strong>2.</strong> Thuê bao NCC: cổng nhận yêu cầu, bảng giá riêng tự báo giá</li>
+        <li><strong>3.</strong> Gói Pro cho hộ: báo giá tiếng Anh, invoice, packing list</li>
+        <li><strong>4.</strong> Hoa hồng dịch vụ thêm: C/O, hun trùng, bảo hiểm, đóng gói</li>
+        <li><strong>5.</strong> Tài trợ từ chương trình hỗ trợ xuất khẩu</li>
+      </ul>
+      <p class="note" style="margin-top:8px">Không thu: phí xem báo giá, phí đăng ký với hộ, bán dữ liệu.</p>
+    </div>
+  </div>
+
+  <div class="label">Rủi ro chính</div>
+  <div class="table-scroll"><table>
+    <thead><tr><th>Rủi ro</th><th>Mức</th><th>Cách giảm</th></tr></thead>
+    <tbody>
+      <tr><td>NCC không tham gia vì sợ bị so giá, sợ mất khách quen</td><td><span class="lvl hi">Cao</span></td><td>Báo giá riêng tư, không xếp hạng chỉ theo giá, phí theo lô chốt; bắt đầu với 3–5 NCC quen</td></tr>
+      <tr><td>Con gà – quả trứng: ít NCC thì ít hộ dùng, và ngược lại</td><td><span class="lvl hi">Cao</span></td><td>Thu hẹp: một tuyến Việt Nam → Mỹ, một nhóm hàng; người vận hành làm tay lúc đầu</td></tr>
+      <tr><td>Giá ước tính sai do nhập sai kích thước hoặc phụ phí phát sinh</td><td><span class="lvl hi">Cao</span></td><td>Luôn ghi "ước tính", hiện khoảng giá; giá chốt do NCC đưa; theo dõi độ lệch</td></tr>
+      <tr><td>Thuế và quy định hải quan Mỹ thay đổi nhanh</td><td><span class="lvl hi">Cao</span></td><td>Không tự tính thuế ở MVP; dẫn nguồn chính thức kèm ngày cập nhật; NCC xác nhận</td></tr>
+      <tr><td>Dữ liệu sai lan sang nhiều doanh nghiệp khi dùng chung</td><td><span class="lvl hi">Cao</span></td><td>Ngưỡng ≥ 3 lô từ ≥ 2 doanh nghiệp; ưu tiên số NCC cân thật; số lệch nhiều chờ duyệt</td></tr>
+      <tr><td>Hộ ngại chia sẻ vì sợ lộ mẫu mã hoặc giá</td><td><span class="lvl mid">Trung bình</span></td><td>Chỉ chia sẻ thông số vật lý ẩn danh; hộ tự chọn đồng ý</td></tr>
+      <tr><td>NCC không ghi số cân đo thật</td><td><span class="lvl mid">Trung bình</span></td><td>Nhập nhanh qua Zalo / ảnh phiếu cân; ghi số mới tính là lô hợp lệ để thu phí</td></tr>
+      <tr><td>Hai bên gặp nhau rồi giao dịch ngoài nền tảng</td><td><span class="lvl mid">Trung bình</span></td><td>Giá trị nằm ở công cụ (đóng gói, giấy tờ, báo giá), không chỉ ở việc kết nối</td></tr>
+      <tr><td>AI đọc sai hoặc bịa thông tin</td><td><span class="lvl mid">Trung bình</span></td><td>AI không tính tiền; hiện bản gốc; luôn có bước xác nhận</td></tr>
+      <tr><td>Hộ kinh doanh ngại nhập dữ liệu</td><td><span class="lvl mid">Trung bình</span></td><td>Nhập bằng ảnh và chatbot; chỉ bắt buộc vài trường</td></tr>
+      <tr><td>Đã có nền tảng so giá chuyển phát quốc tế</td><td><span class="lvl mid">Trung bình</span></td><td>Tập trung chỗ họ bỏ trống: NCC nhỏ báo giá thủ công, hàng cồng kềnh, giấy tờ hàng thủ công</td></tr>
+    </tbody>
+  </table></div>
+</section>
+
+<section id="danh-gia">
+  <h2><span class="num">3</span>Đánh giá bài toán</h2>
+  <p class="sub">So sánh với thị trường trước, rồi chấm điểm bài toán.</p>
+
+  <div class="label">So sánh với sản phẩm trên thị trường</div>
+  <div class="card">
+    <ul class="cmp">
+      <li><strong>Easyship</strong>: so giá chuyển phát nhanh nhiều hãng cho từng kiện<br><span class="gap">Thiếu: tính đóng gói nhiều mẫu, forwarder nhỏ Việt Nam, giấy tờ hàng thủ công</span></li>
+      <li><strong>Flexport · Shipa Freight · FreightAmigo</strong>: báo giá online đường biển ghép hàng và hàng không<br><span class="gap">Thiếu: hợp lô lớn (mốc 5 CBM / 750 kg), phải tự biết CBM, tiếng Anh</span></li>
+      <li><strong>Ship4wd</strong>: cho doanh nghiệp nhỏ, khoá giá, trả trước phí thông quan<br><span class="gap">Thiếu: chỉ đường biển, không tính đóng gói hàng thủ công</span></li>
+      <li><strong>Boxme Global</strong>: fulfillment xuyên biên giới, nhiều hãng vận chuyển<br><span class="gap">Thiếu: hướng tới hàng thương mại điện tử chuẩn; tuyến Mỹ từng đi qua kho ở Trung Quốc</span></li>
+      <li><strong>Etsy + Asendia</strong>: gửi hàng từ Việt Nam cho người bán Etsy<br><span class="gap">Thiếu: chỉ đơn trên sàn; nhãn Etsy không mở cho người bán Việt Nam</span></li>
+      <li><strong>Forwarder Việt Nam</strong>: lo trọn gói kể cả giấy tờ<br><span class="gap">Thiếu: báo giá qua Zalo, chậm, mỗi nơi một kiểu (đây là chỗ đề tài giải)</span></li>
+    </ul>
+  </div>
+
+  <div class="grid g2" style="margin-top:14px">
+    <div class="card" style="border-color:var(--ok)">
+      <h3>Báo Giá Liền Tay khác ở đâu</h3>
+      <ul>
+        <li>Thư viện kích thước và đóng gói hàng thủ công dùng chung, kiểm chứng bằng lô thật</li>
+        <li>Tính đóng gói nhiều mẫu, nhiều kích thước từ kho sản phẩm</li>
+        <li>Kết nối forwarder nhỏ trong nước đang báo giá tay</li>
+        <li>Báo giá riêng tư, không phải chợ so giá công khai</li>
+        <li>AI đọc báo giá lộn xộn về một bảng chung</li>
+        <li>Danh sách giấy tờ riêng cho hàng thủ công</li>
+        <li>Tiếng Việt, nhập bằng ảnh / Zalo, miễn phí cho hộ</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>Không nên cạnh tranh</h3>
+      <ul>
+        <li>Giá chuyển phát nhanh kiện nhỏ với Easyship. Có thể hiện giá này làm tham chiếu</li>
+        <li>Lô lớn nguyên container với Flexport và các nền tảng tương tự</li>
+      </ul>
+      <p class="note" style="margin-top:8px">Thông tin tra cứu 11/2026, chủ yếu từ trang giới thiệu của chính các công ty, cần kiểm tra lại.</p>
+    </div>
+  </div>
+
+  <div class="label">Chấm điểm bài toán (thang 1–5, cần kiểm chứng ở GĐ 0)</div>
+
+  <div class="card">
+    <div class="score"><span>Pain có thật, lặp lại</span><div class="bar"><i style="width:80%"></i></div><b>4</b></div>
+    <div class="score"><span>Tần suất</span><div class="bar"><i style="width:60%"></i></div><b>3</b></div>
+    <div class="score"><span>Hộ sẵn sàng trả tiền</span><div class="bar"><i style="width:40%"></i></div><b>2</b></div>
+    <div class="score"><span>NCC sẵn sàng tham gia</span><div class="bar"><i style="width:50%"></i></div><b>2,5</b></div>
+    <div class="score"><span>Khả thi kỹ thuật</span><div class="bar"><i style="width:80%"></i></div><b>4</b></div>
+    <div class="score"><span>Phù hợp với AI</span><div class="bar"><i style="width:60%"></i></div><b>3</b></div>
+    <div class="score"><span>Khác biệt với giải pháp có sẵn</span><div class="bar"><i style="width:60%"></i></div><b>3</b></div>
+  </div>
+
+  <div class="grid g2" style="margin-top:16px">
+    <div class="card">
+      <h3>Điểm mạnh</h3>
+      <ul>
+        <li>Vấn đề cụ thể, người thật đang làm tay mỗi ngày</li>
+        <li>Đo được: thời gian báo giá, số tin nhắn, độ lệch giá</li>
+        <li>Dữ liệu dùng chung càng dùng càng chính xác, đối thủ đến sau khó có</li>
+        <li>MVP rẻ: AI trả theo lượt, NCC ghi số cân đo vốn đã phải làm</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>Còn chưa chắc</h3>
+      <ul>
+        <li>Một lần báo giá thực tế mất bao lâu? Mất bao nhiêu đơn vì báo chậm?</li>
+        <li>NCC nhỏ có chịu trả lời qua cổng mới, hay chỉ dùng Zalo?</li>
+        <li>Hộ có đơn từ Mỹ đều đặn, hay chủ yếu bán qua sàn đã có sẵn dịch vụ ship?</li>
+        <li>Hộ đã có kích thước đóng gói chuẩn từng mẫu chưa?</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="label">Chỉ số thành công</div>
+  <div class="table-scroll"><table>
+    <thead><tr><th>Chỉ số</th><th>Baseline</th><th>Mục tiêu sau MVP</th></tr></thead>
+    <tbody>
+      <tr><td>Thời gian từ lúc khách hỏi đến lúc báo được giá ship</td><td>đo ở GĐ 0 (giả định 1–3 ngày)</td><td>dưới 4 giờ</td></tr>
+      <tr><td>Số tin nhắn với NCC cho mỗi lần báo giá</td><td>đo ở GĐ 0</td><td>giảm ≥ 50%</td></tr>
+      <tr><td>Độ lệch giá ship đã báo so với hoá đơn thật</td><td>đo ở GĐ 0</td><td>dưới 10%</td></tr>
+      <tr><td>Tỷ lệ yêu cầu chốt thành lô hàng</td><td>đo ở GĐ 0</td><td>≥ 30%</td></tr>
+    </tbody>
+  </table></div>
+
+  <div class="callout" style="margin-top:20px">
+    <p><strong>Kết luận:</strong> bài toán đáng làm <strong>nếu thu hẹp phạm vi</strong> (một tuyến, một nhóm hàng, vài NCC đầu tiên). Rủi ro lớn nhất không phải kỹ thuật hay AI mà là <strong>phía NCC có tham gia hay không</strong>.</p>
+    <p>Bắt đầu bằng <strong>AI ước tính đóng gói + NCC ghi số cân đo thật</strong> để thư viện dùng chung lớn dần. Khi đủ lô thật, hệ thống tái sử dụng số đã kiểm chứng cho các doanh nghiệp khác làm cùng loại sản phẩm.</p>
+  </div>
+</section>
+
+<footer>
+  Mọi con số ghi "giả định" là ước lượng ban đầu, cần đo lại bằng phỏng vấn và dữ liệu thật. Quy định thuế và hải quan Mỹ cần kiểm tra tại nguồn chính thức ở thời điểm triển khai.
+</footer>
+
+</div>
+</body>
+</html>

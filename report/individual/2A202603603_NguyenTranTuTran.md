@@ -20,14 +20,17 @@ Lăng kính: **Lặp lại** · **Tốn thời gian** · **Cần đọc, tổng 
 
 | # | Lăng kính | Job Story: Khi… tôi muốn… để… | Ai chịu ảnh hưởng? | Dấu hiệu thật (thời gian, tần suất, số người, bằng chứng) |
 |---:|---|---|---|---|
-| 1 | | | | |
-| 2 | | | | |
-| 3 | | | | |
-| 4 | | | | |
-| 5 | | | | |
-| 6 | | | | |
-| 7 | | | | |
-| 8 | | | | |
+| # | Lăng kính | Job Story: Khi… tôi muốn… để… | Ai chịu ảnh hưởng? | Dấu hiệu thật (thời gian, tần suất, số người, bằng chứng) |
+|---:|---|---|---|---|
+| 1 | Cần đọc, tổng hợp | Khi khách nước ngoài đặt mua nhiều món đồ thủ công kích thước đa dạng, tôi muốn ước lượng kích thước đóng gói thể tích và cước phí ngay, để báo giá trọn gói kịp thời mà không bị lỗ tiền ship. | Chủ shop thủ công mỹ nghệ, Khách quốc tế | Mất 30–45 phút/đơn đo đạc và hỏi 2–3 forwarder; tần suất 5–10 đơn/tuần; 20% khách rớt đơn vì chờ báo giá quá lâu. |
+| 2 | Cần đọc, tổng hợp | Khi đơn hàng nhập khẩu từ nhiều xưởng nước ngoài đang vận chuyển, tôi muốn biết trạng thái thực tế và dự báo rủi ro trễ hàng ở một nơi, để chủ động kế hoạch sản xuất trong nước mà không phải dò hỏi từng bên mỗi ngày. | Nhân viên thu mua, Trưởng bộ phận kho vận | Mất 60–90 phút mỗi sáng mở 4–5 app/email (WeChat, WhatsApp, mail); 15 nhà cung cấp; 1–2 lần/tháng bị động do hàng trễ 3–5 ngày. |
+| 3 | Lặp lại, Tốn thời gian | Khi editor nộp bản dựng video, tôi muốn kiểm tra nhanh các tiêu chuẩn kỹ thuật và độ khớp với kịch bản gốc, để phản hồi chỉnh sửa ngay cho editor mà không phải xem đi xem lại video từ đầu đến cuối. | Video Team Leader, Editor | 8–12 video/ngày; Leader mất 2–3 tiếng/ngày soi checklist thủ công; editor phải sửa đi sửa lại chiếm 40% thời gian làm việc. |
+| 4 | Lặp lại, Pain người khác | Khi khách nhắn tin hỏi thuê xe theo lộ trình riêng nhiều điểm dừng, tôi muốn có giá cước chuẩn kèm phụ phí trong 2 phút, để gửi báo giá cho khách trước khi họ sang hỏi bên khác. | CSKH nhà xe, Khách thuê xe | Mất 10–15 phút/khách tra Google Maps và file Excel cước; 30% khách bỏ đi nếu phải chờ báo giá quá 5 phút. |
+| 5 | Tốn thời gian | Khi dồn 30–50 ảnh chụp hóa đơn chi tiêu cuối tháng, tôi muốn tự động trích xuất MST, ngày tháng, tổng tiền và hạng mục, để nộp bảng kê hoàn ứng đúng hạn mà không phải gõ tay từng dòng. | Nhân viên thị trường, Kế toán | Mất 2–3 tiếng ngày cuối tháng; tỉ lệ gõ sai số tiền/MST khoảng 10%, thường xuyên bị kế toán trả về làm lại. |
+| 6 | Lặp lại | Khi chuẩn bị đăng loạt bài truyền thông lên fanpage, tôi muốn quét nhanh từ ngữ nhạy cảm, lỗi chính tả và hashtag bắt buộc, để đảm bảo bài viết chuẩn chỉ trước khi lên sóng. | Content Writer, Social Manager | 3–5 bài/ngày; thỉnh thoảng bị lỗi chính tả hoặc thiếu link chiến dịch khiến sếp nhắc nhở. |
+| 7 | Pain từ người khác | Khi khách nhắn tin khiếu nại sản phẩm lỗi lúc đêm muộn, tôi muốn khách được hướng dẫn chụp ảnh xác nhận và biết quy trình đổi trả ngay, để khách yên tâm không đánh giá 1 sao. | Khách mua hàng, Chủ shop online | 2–4 ca khiếu nại/tối; sáng hôm sau trả lời thì khách đã đánh giá 1 sao trên sàn vì nghĩ shop trốn tránh. |
+| 8 | Tốn thời gian | Khi đối chiếu sao kê ngân hàng với danh sách đơn hàng đã xuất kho, tôi muốn tự động đánh dấu các giao dịch trùng mã đơn, để kế toán chỉ phải dò tay các ca khách ghi sai cú pháp. | Kế toán thanh toán, Thủ kho | 50–100 giao dịch/ngày; mất 45–60 phút mỗi chiều dò tay; 10% khách ghi sai cú pháp phải gọi điện đối soát. |
+
 
 **Nếu có dùng AI để gợi ý thêm:** ý nào AI gợi ý mà bạn giữ lại, ý nào bỏ và vì sao.
 
