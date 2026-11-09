@@ -56,3 +56,24 @@ Mỗi thành viên thêm một mục theo mẫu dưới đây, tiêu đề là `
 **Điều mình học được từ phần nhóm:**
 
 -
+### Nguyễn Thùy Lam - 2A2202603632
+
+**Phần việc phụ trách:**
+
+- Hỗ trợ phân tích mức can thiệp AI và tiêu chí đánh giá đầu ra (CP4, CP6).
+
+**Đóng góp cụ thể** (mình đã làm gì, ra sản phẩm gì):
+
+- chuẩn bị phần scan problem và 3 Problem Card để trao đổi với nhóm.
+- góp ý phân biệt việc dùng công thức, việc AI hỗ trợ và quyết định cần con người duyệt trong quy trình báo giá.
+- đề xuất kiểm tra thông tin AI trích xuất với báo giá gốc, chú ý đơn vị tính, phụ phí và các thông tin còn thiếu.
+
+**Bằng chứng** (phần nào trong `group_report.md`, file nào trong `report/assets/`, commit nào):
+
+- [Báo cáo cá nhân](report/individual/2A202603632_NguyenThuyLam.md)
+
+**Điều mình học được từ phần nhóm:**
+
+- Tôi hiểu rằng không phải bước nào cũng cần AI. Các phép tính cần công thức rõ ràng, còn AI phù hợp để hỗ trợ đọc và tổng hợp thông tin.
+- Tôi học cách đánh giá đầu ra dựa trên dữ liệu gốc và giữ bước con người kiểm tra trước khi gửi báo giá.
+
