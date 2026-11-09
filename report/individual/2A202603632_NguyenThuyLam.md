@@ -1,4 +1,4 @@
-# Báo cáo cá nhân — MSSV_HoTen
+# Báo cáo cá nhân — Nguyễn Thùy Lam
 
 > Đổi tên file theo quy tắc `MSSV_HoTen.md`, ví dụ `20241234_NguyenVanAn.md` (MSSV trước, dấu `_`, họ tên viết liền không dấu). Sửa cả dòng tiêu đề phía trên cho khớp.
 > Template chi tiết và prompt mẫu cho từng mục: [docs/01-worksheet.md](../../docs/01-worksheet.md).
@@ -32,14 +32,11 @@ Nhân vật: Lam, nhân viên Cybersecurity của một công ty công nghệ, p
 
 **Nếu có dùng AI để gợi ý thêm:** ý nào AI gợi ý mà bạn giữ lại, ý nào bỏ và vì sao.
 
--
+- Giữ tình huống Security theo lựa chọn cuối trong chat; các ý về HR, thực đơn và đóng gói đã được cân nhắc rồi thay thế trong bản scan này. AI hỗ trợ tách 6 problem, viết Job Story và bổ sung thời gian ước tính.
 
 ---
 
 ## 3. Top 3 Problem Cards + quy trình nháp (CP2)
-
-*Bản nháp dựa trên tình huống giả định ở CP1. Baseline và thời gian từng bước là ước tính minh họa; target là mục tiêu thử nghiệm, chưa phải kết quả đo. Cần ghi thời gian trên các trường hợp thực tế trước khi kết luận về hiệu quả.*
-
 ### Bảng chọn top 3
 
 | Rank | Problem | Vì sao chọn | Điều còn chưa chắc |
@@ -151,16 +148,17 @@ Kết quả từ các công cụ trên cùng website và phiên bản
 
 | Hoạt động | Tôi đã làm gì? | Kết quả / ảnh hưởng tới bài nhóm |
 |---|---|---|
-| Pitch Problem Card | | |
-| Phản biện bài của bạn khác | Câu hỏi tôi đã đặt: | |
-| Nhận phản biện | Câu hỏi tôi nhận được: | Tôi đã sửa gì: |
-| Gom cluster / cây OST | | |
-| Chọn candidate problem | | |
-| Kiểm chứng / research | | |
-| Quy trình nhóm | | |
-| Problem Statement | | |
-| Mức can thiệp AI | | |
-| Quyết định | | |
+| Pitch Problem Card (CP3) | Tôi đưa ra vấn đề các hộ kinh doanh phải tự ước lượng cách đóng thùng khi chưa có quy cách đã kiểm chứng để tham khảo. | Ý tưởng được đưa vào nhóm vấn đề đóng gói và vận chuyển hàng thủ công sang Mỹ. |
+| Phản biện bài của bạn khác (CP3) | Tôi hỏi liệu ghi chú cố định có đủ thay AI trong việc lên kế hoạch bữa ăn và có thể ghép bước hỏi thông tin khách vào luồng báo giá không. | Gợi mở việc so sánh giải pháp đơn giản và liên kết các bước công việc. |
+| Nhận phản biện (CP3) | Tôi nhận câu hỏi về việc hộ kinh doanh có sợ lộ mẫu mã, giá bán khi chia sẻ dữ liệu đóng gói. | Làm rõ vấn đề quyền riêng tư khi xây dựng dữ liệu dùng chung. |
+| Gom cluster / cây OST (CP3) | Tôi góp ý gom các vấn đề về đóng gói, hỏi phí ship và giấy tờ vào cùng một nhóm. | Giúp nhìn rõ các nhu cầu trong hành trình báo giá cho khách. |
+| Chọn candidate problem (CP3) | Tôi tham gia trao đổi về phạm vi bài toán và góp ý tập trung vào hàng thủ công đi Mỹ. | Giữ phạm vi đề tài cụ thể hơn để nhóm tiếp tục kiểm chứng. |
+| Kiểm chứng / research (CP4) | Tôi gợi ý tìm hiểu cả khó khăn của hộ kinh doanh và phía vận chuyển. | Bổ sung góc nhìn hai phía, nhất là việc NCC ngại công khai bảng giá. |
+| Quy trình nhóm (CP5) | Tôi góp ý cho nhập thông tin lô hàng một lần, dùng lại khi hỏi nhiều NCC. | Hạn chế gửi lặp thông tin và hỏi bổ sung qua nhiều lượt tin nhắn. |
+| Problem Statement (CP5–CP6) | Tôi góp ý nêu rõ bước ước lượng đóng gói và chờ báo giá là các điểm nghẽn. | Giúp mô tả vấn đề cụ thể hơn thay vì chỉ nói báo giá chậm. |
+| Mức can thiệp AI (CP6) | Tôi góp ý dùng công thức để tính toán, AI hỗ trợ đọc báo giá và con người duyệt trước khi gửi. | Phân biệt việc có thể hỗ trợ tự động với quyết định cần người kiểm tra. |
+| Quyết định (CP6) | Tôi góp ý kiểm chứng nhu cầu và sự tham gia của NCC trước khi triển khai. | Phù hợp hướng Not Yet của nhóm, ưu tiên kiểm chứng ở GĐ 0. |
+| Tổng kết (CP7) | Tôi tổng hợp lại điểm nghẽn, giới hạn của AI và những giả định còn cần kiểm chứng. | Làm cơ sở viết reflection và rà soát tính thống nhất của báo cáo. |
 
 ---
 
@@ -168,35 +166,44 @@ Kết quả từ các công cụ trên cùng website và phiên bản
 
 | Checkpoint | Tôi dùng AI để làm gì? | AI hữu ích ở đâu? | AI sai hoặc hời hợt ở đâu? | Tôi sửa gì bằng nhận định của mình? |
 |---|---|---|---|---|
-| CP1 Scan | | | | |
-| CP2 Problem Card | | | | |
-| CP4 Research | | | | |
-| CP5 Quy trình | | | | |
-| CP5–6 Problem Statement | | | | |
-| CP6 Mức can thiệp / quyết định | | | | |
+| CP1 Scan | Gợi ý tình huống, viết Job Story và điền bảng; chuyển từ HR sang Security theo yêu cầu của tôi. | Tách quy trình thành 6 problem, nêu actor và bổ sung thời gian thao tác. | Ban đầu dùng tên lăng kính ngoài 4 phạm vi; dấu hiệu chủ yếu là tình huống giả định; các khoảng thời gian chưa được đo. | Tôi giới hạn đúng 4 lăng kính, yêu cầu thêm thời gian, đổi tên nhân vật thành Lam và cuối cùng chọn quay lại Security. |
+| CP2 Problem Card | Chọn top 3, viết card, quy trình hiện tại, phương án không dùng AI và giả thuyết AI. | Làm rõ nút thắt, phạm vi và cách so sánh phương án. | AI tự đề xuất thứ hạng và target khi chưa có dữ liệu hiện trường; chưa có xác nhận cá nhân ở phần phản biện card. | Chưa ghi nhận tôi đã sửa nội dung chuyên môn của CP2; cần tự kiểm tra thứ hạng, target và ý kiến đồng ý/không đồng ý trước khi nộp. |
 
 ---
 
 ## 6. Reflection (CP7)
 
-Trả lời bằng trải nghiệm thật của bạn, tối thiểu 200 từ cho các câu 6.1–6.6 (không tính 6.7, câu này được chấm riêng ở tiêu chí C5). **Không dùng AI để viết thay.**
 
 **6.1. Tôi học được gì khi nghe top 3 problems của các bạn khác?**
 
-**6.2. Nhóm có lúc nào bị "solution-first" (nghĩ giải pháp trước khi hiểu vấn đề) không? Lúc đó nhóm nhận ra và xử lý thế nào?**
+Tôi nhận thấy những vấn đề như đóng gói, hỏi phí ship và chuẩn bị giấy tờ có thể thuộc cùng một quy trình. Tôi cần nhìn vào người gặp vấn đề, bước bị nghẽn và ảnh hưởng thực tế trước khi nghĩ đến công cụ.
 
-**6.3. Tôi có đổi ý sau khi bị phản biện không? Kể một lần cụ thể.**
+**6.2. Nhóm có lúc nào bị "solution-first" không? Nhóm xử lý thế nào?**
 
-**6.4. Kết quả kiểm chứng (phỏng vấn/survey/research) có làm tôi bất ngờ không? Điều gì?**
+Tôi thấy nhóm có những ý đi thẳng vào xây chatbot hoặc chợ so giá. Nhóm đã quay lại xác định nhu cầu đóng gói, hỏi giá và giấy tờ, rồi thu hẹp phạm vi vào hàng thủ công đi Mỹ.
+
+**6.3. Tôi có đổi ý sau khi bị phản biện không?**
+
+Sau câu hỏi về nguy cơ lộ mẫu mã và giá bán, tôi cần xem xét kỹ hơn điều kiện chia sẻ dữ liệu đóng gói. Tôi thấy hướng chỉ chia sẻ thông số vật lý đã ẩn danh, khi hộ đồng ý, phù hợp hơn việc chia sẻ toàn bộ dữ liệu.
+
+**6.4. Kết quả kiểm chứng có làm tôi bất ngờ không?**
+
+Qua phần kiểm chứng trong báo cáo nhóm, tôi chú ý việc NCC không muốn công khai bảng giá dù người bán cần so sánh. Tôi hiểu rằng giải pháp phải có lợi cho cả hai phía; các số liệu hiện tại vẫn cần được đo thêm.
 
 **6.5. Điều khó nhất khi viết Problem Statement là gì?**
 
-**6.6. Nếu làm lại, tôi sẽ đổi gì? Tôi sẽ phản biện nhóm mạnh hơn ở điểm nào?**
+Tôi thấy khó ở việc mô tả điểm nghẽn cụ thể thay vì chỉ nói “báo giá chậm”. Tôi cần tách thời gian thao tác và thời gian chờ, đồng thời nêu rõ tác động và cách đo kết quả.
 
-**6.7. Hiểu bài:** giải thích bằng 5–8 câu, không nhìn tài liệu, chuỗi *problem → quy trình → metric → boundary → mức can thiệp AI → quyết định* của bài nhóm mình.
+**6.6. Nếu làm lại, tôi sẽ đổi gì?**
+
+Tôi sẽ ưu tiên hỏi người dùng và kiểm tra số liệu sớm hơn. Tôi cũng sẽ hỏi kỹ hơn liệu bảng tính, mẫu yêu cầu chuẩn hoặc quy tắc đơn giản đã đủ giải quyết vấn đề trước khi thêm AI.
+
+**6.7. Hiểu bài: problem → quy trình → metric → boundary → mức can thiệp AI → quyết định.**
+
+Tôi hiểu vấn đề nhóm chọn là hộ kinh doanh mất nhiều thời gian đóng gói và hỏi giá ship hàng thủ công sang Mỹ. Quy trình gồm xác định thông tin lô hàng, hỏi NCC, so sánh và báo giá cho khách. Tôi theo dõi các mục tiêu: báo giá dưới 4 giờ, giảm ít nhất 50% tin nhắn, lệch giá dưới 10% và tỷ lệ chốt ít nhất 30%. Các mục tiêu này cần kiểm chứng bằng dữ liệu thật. Tôi hiểu AI không tự tính tiền, tự chốt NCC hay tự gửi báo giá; con người vẫn phải duyệt. Nhóm chọn Workflow kết hợp công thức, AI và người kiểm tra. Quyết định hiện tại là Not Yet, cần kiểm chứng nhu cầu và sự tham gia của NCC trước khi triển khai.
 
 ---
 
 ## 7. Tài liệu tham khảo
-
--
+- [Worksheet hướng dẫn checkpoint](../../docs/01-worksheet.md): yêu cầu về Job Story, dấu hiệu, card và checkpoint.
+- [Các framework của môn học](../../docs/03-international-frameworks.md): tài liệu được báo cáo nhóm dẫn; chưa kiểm tra độc lập nội dung trong lần chỉnh sửa này.
