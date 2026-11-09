@@ -14,7 +14,7 @@
 |---:|---|---|---|---|
 | 1 | Mai Lâm Tấn Đạt | 2A202603645 | Trưởng nhóm | https://github.com/tandat411/K5-L3A-Day02-3TDL-DiscoveryProblemFraming |
 | 2 | | | Thành viên | |
-| 3 | | | Thành viên | |
+| 3 | Lục Anh Tuấn | 2A202603634 | Thành viên | tuanvtxm6 |
 | 4 | | | Thành viên | |
 
 Không ghi email hay số điện thoại vào bảng này, vì repo có thể để public.
