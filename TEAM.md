@@ -12,11 +12,12 @@
 
 | STT | Họ và tên | MSSV | Vai trò trong nhóm | Tài khoản GitHub |
 |---:|---|---|---|---|
-| 1 | Mai Lâm Tấn Đạt | 2A202603645 | Trưởng nhóm | https://github.com/tandat411/K5-L3A-Day02-3TDL-DiscoveryProblemFraming |
-| 2 | Nguyễn Mạnh Tường|2A202603646 | Thành viên |manhtuongqt |
-| 3 | Lục Anh Tuấn | 2A202603634 | Thành viên | tuanvtxm6 |
-| 4 | | | Thành viên | |
-| 5 | Phạm Duy Đức | 2A202603634 | Thành viên | mynameduyjob |
+| 1 | Mai Lâm Tấn Đạt | 2A202603645 | Trưởng nhóm | https://github.com/tandat411/ |
+| 2 | Nguyễn Mạnh Tường | 2A202603646 | Thành viên | https://github.com/manhtuongqt/ |
+| 3 | Lục Anh Tuấn | 2A202603634 | Thành viên | https://github.com/tuanvtxm6/ |
+| 4 | Nguyễn Thuỳ Lam | 2A202603632 | Thành viên | https://github.com/ThuyLam4719 |
+| 5 | Phạm Duy Đức | 2A202603634 | Thành viên | https://github.com/mynameduyjob/ |
+| 6 | Nguyễn Trần Tú Trân | 2A202603603 | Thành viên | https://github.com/trannguyentran |
 
 Không ghi email hay số điện thoại vào bảng này, vì repo có thể để public.
 
