@@ -1,4 +1,4 @@
-# Báo cáo cá nhân — 2A202603603_NguyenTranTuTran
+﻿# Báo cáo cá nhân — 2A202603603_NguyenTranTuTran
 
 > Đổi tên file theo quy tắc `MSSV_HoTen.md`, ví dụ `20241234_NguyenVanAn.md` (MSSV trước, dấu `_`, họ tên viết liền không dấu). Sửa cả dòng tiêu đề phía trên cho khớp.
 > Template chi tiết và prompt mẫu cho từng mục: [docs/01-worksheet.md](../../docs/01-worksheet.md).
@@ -6,7 +6,7 @@
 
 ## 1. Thông tin học viên
 
-- Họ tên: Nguyen Tran Tu Tran
+- Họ tên: Nguyễn Trần Tú Trân
 - MSSV: 2A202603603
 - Email trường (không bắt buộc, repo có thể để public):
 - Tên nhóm: 3TDL
@@ -135,7 +135,7 @@ Quy trình nháp hiện tại:
 | Hoạt động | Tôi đã làm gì? | Kết quả / ảnh hưởng tới bài nhóm |
 |---|---|---|
 | Pitch Problem Card | Trình bày trực tiếp Problem Card #1, chia sẻ câu chuyện và nỗi đau có thật của gia đình làm hàng thủ công mỹ nghệ xuất B2B. | Nhóm nhận thấy đây là bài toán thực tế sâu sắc, có người thật việc thật và số liệu đo đếm rõ ràng. |
-| Phản biện bài của bạn khác | Đặt câu hỏi cho ý tưởng quản lý kho của bạn Đạt và đề tài kiểm duyệt video: "Vấn đề này giải quyết bằng bảng tính Excel hoặc Checklist giấy có xong không mà phải cần đến AI?" | Giúp nhóm loại bỏ các ý tưởng bị 'solution-first' và chọn lọc được vấn đề có nút thắt thực sự. |
+| Phản biện bài của bạn khác | **Chủ động phản biện 3 chủ đề của các bạn:**<br>1. *Ghi âm & tóm tắt cuộc họp (Voice AI):* Đặt câu hỏi hướng này đã có quá nhiều app lớn làm (Otter, Fireflies), điểm nào để vượt trội? Điểm nghẽn lớn nhất hiện nay là AI nghe tiếng địa phương (Bắc - Trung - Nam, giọng vùng miền các nước) rất kém và dễ sai lệch nội dung quan trọng.<br>2. *App ăn uống Healthy:* Phản biện tệp khách quá rộng và thiếu thực tế; phần lớn mọi người sống cùng gia đình phải phụ thuộc vào đồ ăn có sẵn trong tủ lạnh và nấu chung ăn chung với gia đình, chỉ người ở một mình mới tự nấu theo chế độ riêng.<br>3. *App học cùng nhau kết hợp Calendar:* Phản biện tâm lý con người lười học lười làm, chuông lịch nhắc việc người ta sẽ gạt đi lướt điện thoại tiếp; gợi ý giải pháp kết hợp cơ chế định vị tìm bạn học xung quanh như game Pokémon Go để tạo động lực chéo. | Giúp nhóm nhìn nhận thẳng vào tâm lý hành vi thật của người dùng, loại bỏ các ý tưởng viển vông hoặc quá đại trà trên thị trường. |
 | Nhận phản biện | Nhận câu hỏi từ nhóm: "Nếu hộ kinh doanh nhập sai kích thước hàng làm forwarder tính cước thực tế cao hơn thì ai chịu trách nhiệm?" | Tôi tiếp thu và bổ sung nguyên tắc: Hệ thống chỉ đưa ra giá ước tính, giá chốt cuối cùng bắt buộc do forwarder và hộ kinh doanh xác nhận bằng văn bản. |
 | Gom cluster / cây OST | Đóng góp nhánh "Tối ưu hóa khâu đóng thùng và kết nối cước vận chuyển B2B ngách" vào cây Opportunity Solution Tree của nhóm. | Giúp cấu trúc cây OST của nhóm mạch lạc, có sự phân nhánh rõ ràng giữa hàng thương mại chuẩn và hàng thủ công dị hình. |
 | Chọn candidate problem | Cùng nhóm thảo luận và bảo vệ đề tài; cả nhóm đã đồng thuận biểu quyết 100% chọn đề tài "Nền tảng báo giá vận chuyển nhanh cho hộ thủ công mỹ nghệ" của tôi làm đề tài chung. | Nhóm có một đề tài thống nhất, giàu tính thực tiễn và có sẵn dữ liệu thực tế để đào sâu. |
@@ -165,20 +165,57 @@ Trả lời bằng trải nghiệm thật của bạn, tối thiểu 200 từ ch
 
 **6.1. Tôi học được gì khi nghe top 3 problems của các bạn khác?**
 
+- Khi lắng nghe các bài toán của các bạn trong nhóm, tôi nhận thấy những trăn trở rất đa dạng xuất phát từ từng độ tuổi và trải nghiệm sống khác nhau: bạn trẻ thì trăn trở về việc quản lý thời gian học tập, bạn đi làm thì đau đầu về ghi chú cuộc họp hay quản lý tiến độ video.
+- Nhưng khi ngồi lại và kết hợp những độ tuổi, kinh nghiệm khác nhau đó, tôi hiểu ra rằng ở mỗi thời kỳ, con người đều có những điểm trăn trở cốt lõi khá giống nhau: sự lười biếng, sự quá tải thông tin và nỗi sợ rủi ro tài chính.
+- Nếu biết kết hợp những góc nhìn chung đó lại để giải quyết những bài toán nhỏ lẻ, lặp đi lặp lại trong đời sống hàng ngày, chúng ta hoàn toàn có thể tìm ra những giải pháp thiết thực thay vì mơ mộng những điều quá to tát.
+
 **6.2. Nhóm có lúc nào bị "solution-first" (nghĩ giải pháp trước khi hiểu vấn đề) không? Lúc đó nhóm nhận ra và xử lý thế nào?**
+
+- Nhóm tôi chắc chắn có lúc bị "solution-first". Điển hình nhất là khi tôi vừa nêu ra bài toán khó khăn về chi phí và đóng gói hàng thủ công, phản xạ đầu tiên của các bạn là: "Hay mình làm một con Chatbot AI tư vấn tự động đi!".
+- Các bạn chỉ nghĩ đến công nghệ AI mà chưa hề nghĩ sâu đến bản chất vấn đề: Khách hàng mua hàng bằng cách nào? Liệu hộ kinh doanh hay nhà xe có chịu bỏ tiền túi ra mua dịch vụ này không? Chúng ta sẽ thu tiền từ ai và dòng tiền vận hành ra sao?
+- Khi tôi đặt lại một loạt câu hỏi thực tế về cách vận hành và thu phí, cả nhóm "ồ, à" vỡ lẽ vì nhận ra làm chatbot không giải quyết được gốc rễ bài toán đóng gói. Sau đó nhóm đã bình tĩnh ngồi lại, bóc tách từng vấn đề nhỏ và tìm hướng giải quyết bài toán quy trình trước khi bàn về công nghệ.
 
 **6.3. Tôi có đổi ý sau khi bị phản biện không? Kể một lần cụ thể.**
 
+- Tôi chưa từng đổi ý về bài toán lõi của mình, bởi vì ý tưởng này xuất phát từ chính nỗi đau và trải nghiệm thực tế mà gia đình tôi đang phải đối mặt mỗi ngày khi sản xuất hàng thủ công.
+- Tuy nhiên, tôi hoàn toàn cởi mở tiếp thu các phản biện sắc bén của các bạn để hoàn thiện đề tài. Cụ thể, khi các bạn đặt câu hỏi: "Nếu để AI tự tính tiền cước mà bị sai lệch thì ai chịu trách nhiệm đền tiền cho khách?", tôi đã lập tức tiếp thu và sửa đổi: kiên quyết không để AI tự quyết định giá cước, mà chỉ dùng thuật toán hình học đóng thùng và để quyền xác nhận giá cuối cùng thuộc về forwarder và người bán.
+
 **6.4. Kết quả kiểm chứng (phỏng vấn/survey/research) có làm tôi bất ngờ không? Điều gì?**
+
+- Điều làm tôi bất ngờ nhất khi làm desk research là các nền tảng logistics xuyên biên giới nổi tiếng trên thế giới (như Easyship, Flexport, Freightos) đều bỏ trống hoàn toàn phân khúc hộ thủ công nhỏ lẻ và hàng hóa cồng kềnh dị hình ở Việt Nam.
+- Các app quốc tế chỉ tập trung vào bưu kiện chuẩn của sàn thương mại điện tử hoặc container lớn của doanh nghiệp lớn.
+- Thực tế các hộ kinh doanh nhỏ hiện nay hoàn toàn phải tự bơi, tự lên các group Facebook/Zalo để tìm mối ship tiểu ngạch hoặc gom hàng trôi nổi với rất nhiều rủi ro. Điều này chứng minh bài toán của tôi có một khoảng trống thị trường (niche market) vô cùng màu mỡ.
 
 **6.5. Điều khó nhất khi viết Problem Statement là gì?**
 
+- Điều khó khăn nhất đối với tôi là bản thân tôi có trải nghiệm thực tế sâu sắc và hiểu rất rõ nỗi đau kinh doanh của gia đình, nhưng lại không nắm chắc về mặt kỹ thuật thuật toán AI để biết chính xác công nghệ nào xử lý được bước nào.
+- Ranh giới giữa việc dùng công thức toán học thuần túy (Rule) và dùng trí tuệ nhân tạo (AI/LLM) rất dễ bị nhầm lẫn nếu không có sự hỗ trợ phản biện từ các thành viên chuyên về kỹ thuật trong nhóm.
+
 **6.6. Nếu làm lại, tôi sẽ đổi gì? Tôi sẽ phản biện nhóm mạnh hơn ở điểm nào?**
 
+- Nếu được làm lại, tôi sẽ KHÔNG đổi đề tài, vì bài toán này xuất phát từ cơ sở thực tiễn vững chắc nhất mà tôi đang sống cùng nó mỗi ngày.
+- Điểm mạnh lớn nhất của nhóm tôi là sự đa dạng tuyệt vời: các thành viên ở nhiều độ tuổi khác nhau, trải dài từ các chuyên ngành Security, Back-end cho đến AI và kinh doanh.
+- Nhờ sự đa dạng đó, các bạn đã góp ý cho tôi từ góc độ công nghệ lẫn học thuật, còn tôi đóng góp góc nhìn thực tế của một doanh nghiệp gia đình. Nếu phản biện mạnh hơn, tôi sẽ thúc ép các bạn đào sâu vào bài toán kiếm tiền (monetization) sớm hơn nữa ngay từ khâu lên ý tưởng.
+
 **6.7. Hiểu bài:** giải thích bằng 5–8 câu, không nhìn tài liệu, chuỗi *problem → quy trình → metric → boundary → mức can thiệp AI → quyết định* của bài nhóm mình.
+
+- **Problem:** Hộ kinh doanh thủ công nhỏ lẻ bán hàng B2B/B2C ra nước ngoài không có thời gian dọ giá, bị mất khách và bù lỗ cước vì không tính được thể tích đóng thùng (CBM) và phải tìm mối ship thủ công trên các hội nhóm.
+- **Quy trình:** Nhập thông số sản phẩm ➔ Thuật toán tính quy cách đóng thùng 3D ➔ Phát yêu cầu báo giá kín (RFQ) tới các forwarder nhỏ (tiểu ngạch/chính ngạch) ➔ Gom báo giá và trả về chi phí trọn gói tức thì cho khách.
+- **Metric:** Rút ngắn thời gian báo giá từ 1–2 ngày xuống dưới 15 phút; giảm thời gian dọ giá của chủ xưởng xuống dưới 5 phút/đơn; kiểm soát độ lệch cước dưới 10%.
+- **Boundary:** AI tuyệt đối không được tự ý bịa giá cước, không tự cam kết thời gian giao hàng và không tự phê duyệt hợp đồng thay con người.
+- **Mức can thiệp AI:** Workflow kết hợp — 80% dùng Rule/Thuật toán 3D Bin Packing để tính thể tích, 20% dùng Vision/LLM đọc ảnh chụp và tin nhắn báo giá của forwarder.
+- **Quyết định:** GO — Triển khai giải pháp dưới dạng Zalo Mini App gọn nhẹ cho tuyến Việt Nam ➔ Mỹ, miễn phí cho người bán và thu phí thành công (success-fee) từ nhà cung cấp vận chuyển.
 
 ---
 
 ## 7. Tài liệu tham khảo
 
--
+1. **Easyship Platform Analysis:** [https://www.easyship.com/](https://www.easyship.com/) — Khảo sát nền tảng so sánh cước bưu kiện quốc tế; nhận diện hạn chế không hỗ trợ đóng thùng hàng thủ công dị hình và thiếu mạng lưới forwarder nhỏ nội địa.
+2. **Flexport Digital Freight Forwarding:** [https://www.flexport.com/](https://www.flexport.com/) — Nghiên cứu quy trình số hóa cước biển/hàng không lô lớn (LCL/FCL); nhận diện rào cản pháp nhân công ty không phù hợp cho hộ kinh doanh nhỏ.
+3. **Freightos Freight Market:** [https://www.freightos.com/](https://www.freightos.com/) — Tham khảo cơ chế sàn giao dịch cước quốc tế và cách thức chuẩn hóa thông tin báo giá RFQ.
+4. **Thuật toán 3D Bin Packing Problem:** Silvano Martello, David Pisinger, Daniele Vigo (2000), *"The Three-Dimensional Bin Packing Problem"*, Operations Research — Cơ sở thuật toán hình học tối ưu hóa không gian xếp hàng vào thùng carton.
+5. **Quy định Hải quan & Nhập khẩu Mỹ đối với Hàng thủ công mỹ nghệ:**
+   - US Customs and Border Protection (CBP): Hướng dẫn thủ tục thông quan hàng hóa thương mại vào thị trường Mỹ.
+   - United States Department of Agriculture (USDA - APHIS): Quy định về chứng thư kiểm dịch thực vật và hun trùng (Phytosanitary & Fumigation Certificate) cho sản phẩm mây, tre, nứa, cói.
+   - Đạo luật Lacey Act (US FWS): Quy định khai báo nguồn gốc xuất xứ gỗ đối với các sản phẩm thủ công mỹ nghệ từ gỗ.
+   - US FDA Compliance Policy Guides: Tiêu chuẩn an toàn tiếp xúc thực phẩm đối với gốm sứ thủ công (hàm lượng chì và cadmium).
