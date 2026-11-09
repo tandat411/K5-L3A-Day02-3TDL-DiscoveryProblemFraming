@@ -1,4 +1,4 @@
-# Team
+﻿# Team
 
 > Điền file này trên repo chung do nhóm trưởng fork. Nhóm điền phần **Thông tin nhóm** và **Thành viên**. Mỗi người tự điền phần của mình trong **Cá nhân**. Không copy file này sang repo khác.
 
@@ -39,7 +39,31 @@ Gợi ý vai trò (một người có thể giữ nhiều vai): điều phối t
 
 Mỗi thành viên thêm một mục theo mẫu dưới đây, tiêu đề là `HoVaTen-MSSV`.
 
-### HoVaTen-MSSV
+### NguyenTranTuTran-2A202603603
+
+**Phần việc phụ trách:**
+
+- Đề xuất ý tưởng chính (Pitcher Problem Card #1), phụ trách kiểm chứng thị trường & Desk research, đồng xây dựng Problem Statement và đánh giá rủi ro thương mại (Viability).
+
+**Đóng góp cụ thể** (mình đã làm gì, ra sản phẩm gì):
+
+- Cung cấp dữ liệu và câu chuyện thực tế từ xưởng thủ công mỹ nghệ của gia đình; pitch và bảo vệ thành công đề tài được cả nhóm đồng thuận chọn làm đề tài chung.
+- Thực hiện nghiên cứu thực địa và đối thủ (Easyship, Flexport, Freightos, Boxme), chỉ ra khoảng trống thị trường cho hàng thủ công dị hình và cước gom nội địa.
+- Đóng góp cấu trúc 3 yếu tố chi phí (đóng gói, gom cước đa tuyến, tính trọn gói) vào quy trình Before/After và Problem Statement v1.
+- Biên soạn tài liệu chi tiết đề tài ShipQuote Craft trong thư mục `report/de-tai-bao-gia-van-chuyen/`.
+
+**Bằng chứng** (phần nào trong `group_report.md`, file nào trong `report/assets/`, commit nào):
+
+- Báo cáo cá nhân: `report/individual/2A202603603_NguyenTranTuTran.md`
+- Tài liệu nghiên cứu đề tài: `report/de-tai-bao-gia-van-chuyen/de-tai-bao-gia-van-chuyen.md`
+- Các commit trên nhánh `feature/2A202603603_NguyenTranTuTran` của tác giả.
+
+**Điều mình học được từ phần nhóm:**
+
+- Nhóm có các thành viên ở nhiều độ tuổi và chuyên môn khác nhau (Security, Back-end, AI) giúp tôi nhìn nhận bài toán kinh doanh dưới góc độ kiến trúc hệ thống và an toàn dữ liệu.
+- Hiểu sâu sắc cách đưa một nỗi đau đời thực thành một bài toán AI/Workflow có boundary chặt chẽ, tránh được bẫy 'solution-first' (lao vào làm chatbot khi chưa rõ quy trình).
+
+### HoVaTen-MSSV (Thành viên tiếp theo)
 
 **Phần việc phụ trách:**
 
