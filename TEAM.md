@@ -13,7 +13,7 @@
 | STT | Họ và tên | MSSV | Vai trò trong nhóm | Tài khoản GitHub |
 |---:|---|---|---|---|
 | 1 | Mai Lâm Tấn Đạt | 2A202603645 | Trưởng nhóm | https://github.com/tandat411/K5-L3A-Day02-3TDL-DiscoveryProblemFraming |
-| 2 | | | Thành viên | |
+| 2 | Nguyễn Mạnh Tường|2A202603646 | Thành viên |manhtuongqt |
 | 3 | Lục Anh Tuấn | 2A202603634 | Thành viên | tuanvtxm6 |
 | 4 | | | Thành viên | |
 | 5 | Phạm Duy Đức | 2A202603634 | Thành viên | mynameduyjob |
