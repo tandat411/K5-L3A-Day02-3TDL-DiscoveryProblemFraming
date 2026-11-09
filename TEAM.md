@@ -56,21 +56,3 @@ Mỗi thành viên thêm một mục theo mẫu dưới đây, tiêu đề là `
 **Điều mình học được từ phần nhóm:**
 
 -
-
-### NguyenManhTuong-2A202603646
-
-**Phần việc phụ trách:**
-
-- Theo phân công ở bảng thành viên: kiểm chứng và tìm hiểu domain cho CP3–CP4. Phần này cần đối chiếu sản phẩm nhóm trước khi ghi là đã hoàn thành.
-
-**Đóng góp cụ thể:**
-
-- Chuẩn bị phần cá nhân CP1: 5 tình huống theo Job Story; CP2: 3 Problem Card và 3 quy trình nháp để trao đổi với nhóm.
-
-**Bằng chứng:**
-
-- [Báo cáo cá nhân của tôi](report/individual/2A202603646_NguyenManhTuong.md), commit `2024bad`.
-
-**Điều mình học được từ phần nhóm:**
-
-- Tôi sẽ tự bổ sung sau khi đối chiếu phần mình thực sự tham gia trong buổi thảo luận nhóm.
