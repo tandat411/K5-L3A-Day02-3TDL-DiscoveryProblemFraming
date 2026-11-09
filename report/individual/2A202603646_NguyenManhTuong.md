@@ -152,21 +152,41 @@ Tôi cần tự bổ sung câu hỏi phản biện mình **đã thực sự đ�
 
 ## 6. Reflection (CP7)
 
-Phần này tôi sẽ tự viết sau khi đối chiếu ghi chép buổi nhóm. Theo yêu cầu của lab, câu trả lời 6.1–6.6 phải dựa trên trải nghiệm thật của tôi và có ít nhất 200 từ; AI không viết thay phần reflection.
+Phần này là nhận xét của tôi sau khi xem lại bài cá nhân và tài liệu của nhóm.
 
 **6.1. Tôi học được gì khi nghe top 3 problems của các bạn khác?**
 
+So với hướng vận chuyển của nhóm, bài học lớn nhất tôi rút ra từ card ôn thi là không được vội vã đưa ra công cụ. Cần chỉ rõ ai là người gặp khó khăn (actor), họ bị nghẽn chính xác ở bước nào và có biểu hiện/dấu hiệu cụ thể ra sao trước khi tính đến bất kỳ giải pháp hay công nghệ nào.
+
 **6.2. Nhóm có lúc nào nghĩ giải pháp trước khi hiểu vấn đề không? Nhóm nhận ra và xử lý thế nào?**
+
+Khi đọc lại báo cáo của nhóm, tôi nhận thấy văn bản vẫn còn câu “hộ kinh doanh thiếu công cụ AI” — đây là cách đặt vấn đề ngược, xuất phát từ giải pháp thay vì thực tế. Trong file TEAM.md, vấn đề được mô tả đúng bản chất hơn: người bán tốn nhiều thời gian ước tính quy cách đóng gói, phải liên hệ hỏi giá từng đơn vị vận chuyển và tự đối chiếu các báo giá rời rạc. Đây là quan sát riêng của tôi khi rà soát lại bài, nhóm chưa chính thức thảo luận để chỉnh sửa câu này trong báo cáo.
 
 **6.3. Tôi có đổi ý sau khi bị phản biện không? Một lần cụ thể là gì?**
 
+Tôi không có lần thay đổi quyết định đáng kể nào xuất phát từ phản biện của các thành viên trong nhóm mà tôi nhớ rõ. Tuy nhiên, ở chặng CP2, chính phản biện từ AI đã khiến tôi thay đổi góc nhìn: tôi nhận ra tính năng “phần thưởng” chỉ là một giả thuyết cần được kiểm chứng thực tế, chứ không thể mặc định xem nó là một giải pháp chắc chắn đúng.
+
 **6.4. Kết quả kiểm chứng hoặc research có làm tôi bất ngờ không?**
+
+Điều khiến tôi bất ngờ nhất là báo cáo của nhóm vẫn hoàn toàn thiếu các số đo và dữ liệu thực tế thu thập từ người bán. Việc này khiến tôi muốn tập trung kiểm tra tiếp bước xác thực nhu cầu thực tế của họ ở các chặng sau, thay vì giả định quy trình vận hành trên giấy tờ.
 
 **6.5. Điều khó nhất khi viết Problem Statement là gì?**
 
+Khâu khó khăn nhất là thu hẹp phạm vi vấn đề. Đóng gói, hỏi giá, so sánh biểu phí và xử lý chứng từ hải quan là các nghiệp vụ hoàn toàn khác nhau. Một Problem Statement đạt yêu cầu bắt buộc phải cô lập đúng một điểm nghẽn then chốt, xác định một thước đo cụ thể và vạch rõ ranh giới những việc con người bắt buộc phải trực tiếp can thiệp để xác nhận.
+
 **6.6. Nếu làm lại, tôi sẽ đổi gì và phản biện nhóm mạnh hơn ở điểm nào?**
 
+Nếu được thực hiện lại từ đầu, tôi sẽ tìm cách tiếp cận người bán và các bên vận chuyển sớm hơn để làm rõ: họ mất nhiều thời gian nhất ở khâu chờ phản hồi hay ở khâu đọc và chuẩn hóa dữ liệu báo giá. Đồng thời, tôi sẽ phản biện quyết liệt hơn khi nhóm định nghĩa vấn đề là “thiếu AI”, bởi nhóm chưa hề chứng minh được bước nào trong luồng xử lý thực sự cần đến AI.
+
 **6.7. Tôi tự giải thích chuỗi problem → quy trình → metric → boundary → mức can thiệp AI → quyết định của bài nhóm bằng 5–8 câu:**
+
+1. Người bán hàng thủ công gửi hàng tuyến Việt Nam – Mỹ là đối tượng chính gặp khó khăn trong quy trình này.
+2. Họ phải tự ước tính kích thước đóng gói rồi liên hệ hỏi giá riêng lẻ từng nhà vận chuyển.
+3. Điểm nghẽn lớn nhất nằm ở việc phải nhập lại thông tin nhiều lần và tự đối chiếu các bảng báo giá khác nhau về định dạng lẫn đơn vị.
+4. Hiệu quả cần được đo bằng thời gian từ lúc gửi yêu cầu đến khi chốt báo giá, số lần phải trao đổi lại và sai lệch chi phí thực tế, dù hiện nhóm chưa có số liệu baseline đáng tin cậy.
+5. Con người bắt buộc phải tự thực hiện việc đo đạc kiện hàng thực tế, kiểm tra các khoản phụ phí phát sinh, hoàn tất giấy tờ và chốt giá cuối với khách.
+6. Các quy tắc tính toán thông thường hoàn toàn đủ sức xử lý việc quy đổi đơn vị; AI nếu đưa vào chỉ đóng vai trò hỗ trợ đọc và bóc tách thông tin từ báo giá để người bán kiểm tra lại.
+7. Quyết định hiện tại trong TEAM.md là "Not Yet"; toàn bộ bài toán cần được kiểm chứng trực tiếp với người bán và các đơn vị vận chuyển trước khi bắt tay thực hiện tiếp.
 
 ## 7. Tài liệu tham khảo
 
